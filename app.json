@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mytest/bbb",
+    "pages/mytest/fortest"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#333333",
+    "enablePullDownRefresh": true,
+    "pageOrientation": "portrait"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/testIcon.png",
+        "selectedIconPath": "./assets/testIconSel.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "./assets/testIcon.png",
+        "selectedIconPath": "./assets/testIconSel.png"
+      },
+      {
+        "pagePath": "pages/mytest/fortest",
+        "text": "for",
+        "iconPath": "./assets/testIcon.png",
+        "selectedIconPath": "./assets/testIconSel.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<!--pages/mytest/bbb.wxml-->
+<map
+id="myMap"
+style="width: 100%; height: {{\"400px\"}};"
+longitude="116.313972" latitude="39.980014"
+scale='16'
+subkey="C7PBZ-XQQLI-3KFG2-5BH2V-UBYXJ-C7B2J"
+polyline="{{polyline}}"
+markers="{{markers}}"
+></map>

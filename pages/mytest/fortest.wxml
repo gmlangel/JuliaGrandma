@@ -1,0 +1,34 @@
+<!--pages/mytest/fortest.wxml-->
+<view>
+  <text>for简单数据演示====></text>
+  <view class='simpleViewContainer'>
+  <text wx:for="{{simpleArr}}" wx:key="*this">{{index}}:{{item}}</text>
+  </view>
+
+  <text>for复杂数据结构演示(没有优化渲染的演示，最终会报警告"Do not set same key \"[object Object]\" in wx:key.",因为wx:key的值不是唯一的，应该设置为字符串类型的值，且数组中唯一)</text>
+  <view class='simpleViewContainer2'>
+  <view wx:for="{{arr}}" wx:key="*this">{{item.name}}:{{item.age}}   </view>
+  </view>
+
+  <text>动态创建for数据源的演示</text>
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i" wx:key="*this">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j" wx:key="*this">
+    <view wx:if="{{i <= j}}">{{i}} * {{j}} = {{i * j}}</view>
+  </view>
+</view>
+
+<text>闭包+for的演示</text>
+<block wx:for="{{[1, 2, 3]}}" wx:key="*this">
+  <view>{{index}}:</view>
+  <view>{{item}}</view>
+</block>
+
+<text>for循环数据动态变更的演示(优化渲染后的演示)</text>
+<button bindtap='onClickChangeArr'>随机变换数组内容</button>
+<view class='simpleViewContainer2'>
+<view wx:for="{{arr}}" wx:key="identity">{{item.name}}:{{item.age}}</view>
+</view>
+
+
+
+</view>
