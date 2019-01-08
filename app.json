@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/mytest/bbb",
-    "pages/mytest/fortest"
+    "pages/mytest/fortest",
+    "pages/mytest/iftest",
+    "pages/mytest/templatetest",
+    "pages/mytest/eventTest",
+    "pages/mytest/yinyongTest"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
@@ -27,14 +31,20 @@
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志",
+        "pagePath": "pages/mytest/iftest",
+        "text": "if",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
         "pagePath": "pages/mytest/fortest",
         "text": "for",
+        "iconPath": "./assets/testIcon.png",
+        "selectedIconPath": "./assets/testIconSel.png"
+      },
+      {
+        "pagePath": "pages/mytest/templatetest",
+        "text": "模板",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       }

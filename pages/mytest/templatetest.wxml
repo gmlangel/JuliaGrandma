@@ -1,0 +1,12 @@
+<!--pages/mytest/templatetest.wxml-->
+<text>template的简单应用</text>
+<template name="mytemplate1" style="padding-right:10px;">
+  <view><text style="margin-right:40px;">姓名:</text><text>{{name}}</text></view>
+  <view>年龄:       {{age}}</view>
+  <view>爱好:      {{hoby}}</view>
+  <button style="width:120px;height:30px;line-height:30px;font-size:13px;color:#33ff00;" bindtap="testok">测试按钮</button>
+</template>
+
+<view>
+<template is="mytemplate1" data="{{...mydt}}"></template>
+</view>

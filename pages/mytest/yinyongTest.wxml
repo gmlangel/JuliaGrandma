@@ -1,0 +1,14 @@
+<!--pages/mytest/yinyongTest.wxml-->
+<text>import的用法,import 有作用域的概念，即只会 import 目标文件中定义的 template，而不会 import 目标文件 import 的 template。并且import后的模板只在import标签的同级或子集内有效</text>
+
+<import src="templatetest.wxml" />
+<view style="background-color:#ff0000;">
+<template is="mytemplate1" data="{{name:'郭',age:14,hoby:'你猜'}}"></template>
+</view>
+
+<text>{{"include的用法,可以将目标文件除了 <template/> <wxs/> 外的整个代码引入，相当于是拷贝到 include 位置"}}</text>
+<view style="background-color:#ff0000;">
+<include src="templatetest.wxml"/>
+</view>
+<text>可以看出,通过include方式引入的页面，如果其中需要用到一些数据源才能正常显示，则默认不会正常显示，如果想要显示正常需要在当前的页面对应的JS文件中添加相对应的数据源，请点击下面的按钮查看效果</text>
+<button catchtap='fillInfo'>填充数据源</button>

@@ -1,0 +1,40 @@
+/* pages/mytest/iftest.wxss */
+.ifclass1{
+  display: block;
+  width: 100%;
+  background-color: #ff0000;
+}
+
+.ifclass2{
+  display: block;
+  width: 100%;
+  background-color: #f0f000;
+}
+
+.ifclass3{
+  display: block;
+  width: 100%;
+  background-color: #00ff00;
+}
+
+
+.ifclass4{
+  display: block;
+  width: 100%;
+  background-color: #0000ff;
+}
+
+
+.ifclass5{
+  display: block;
+  width: 100%;
+  background-color: #f000f0;
+}
+
+button{
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #f03033;
+}

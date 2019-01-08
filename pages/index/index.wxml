@@ -7,6 +7,8 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       <image bindtap="showMap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{"显示地图"}}</text>
+      <button bindtap='showEventTest'>显示“事件处理Demo"</button>
+      <button bindtap='showyinyongTest'>import和include</button>
     </block>
   </view>
   <view class="usermotto">

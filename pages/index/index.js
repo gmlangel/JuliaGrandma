@@ -19,6 +19,12 @@ Page({
       url: '../mytest/bbb',
     })
   },
+  showEventTest: function(e){
+    wx.navigateTo({url:'../mytest/eventTest'});
+  },
+  showyinyongTest: function(e){
+    wx.navigateTo({url:'../mytest/yinyongTest'});
+  },
   onLoad: function () {
     console.log("index_inited");
     if (app.globalData.userInfo) {
