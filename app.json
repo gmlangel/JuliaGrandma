@@ -7,17 +7,19 @@
     "pages/mytest/iftest",
     "pages/mytest/templatetest",
     "pages/mytest/eventTest",
-    "pages/mytest/yinyongTest"
+    "pages/mytest/yinyongTest",
+    "pages/mytest/webViewTest",
+    "pages/mytest/ACP"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ff6600",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default",
     "backgroundTextStyle": "light",
     "backgroundColor": "#333333",
     "enablePullDownRefresh": true,
-    "pageOrientation": "portrait"
+    "pageOrientation": "auto"
   },
   "tabBar": {
     "color": "#fff",

@@ -27,7 +27,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const ctx = wx.createCanvasContext('myCanvas');
+    
+    let bbb = ctx.getContext("2d")
+    console.log(ctx);
   },
 
   /**

@@ -1,6 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
+
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#ff6600'
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -12,6 +17,8 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+    
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -35,5 +42,7 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  windowWidth:0,
+  windowHeight:0
 })

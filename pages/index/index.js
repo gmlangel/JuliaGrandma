@@ -8,6 +8,11 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  showWebViewTest:function(){
+    wx.navigateTo({
+      url: '../mytest/webViewTest',
+    })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -60,6 +65,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  showACP:function(e){
+    wx.navigateTo({
+      url: '../mytest/ACP',
     })
   }
 })

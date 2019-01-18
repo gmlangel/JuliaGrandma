@@ -1,1 +1,8 @@
 /* pages/mytest/yinyongTest.wxss */
+@import "yinyongTest+extention.wxss";
+.style1{
+  background-color:#ff0000;
+}
+.style2{
+  font-size: 30rpx;
+}

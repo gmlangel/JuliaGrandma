@@ -1,0 +1,2 @@
+<!--pages/mytest/webViewTest.wxml-->
+<web-view src="https://www.juliaol.cn/classroom/indexV2.html"></web-view>

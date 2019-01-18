@@ -1,4 +1,4 @@
-// pages/mytest/bbb.js
+// pages/mytest/ACP.js
 Page({
 
   /**
@@ -26,15 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var info = wx.getSystemInfoSync();
-    console.log("开始打印系统信息========>")
-    for(var key in info){
-      console.log(key+":", info[key]);
-    }
-    console.log("打印系统信息结束========>")
-    var wW = info.windowWidth;
-    var wH = info.windowHeight;
-    console.log("界面初始化时尺寸",wW,wH);
 
   },
 
@@ -57,12 +48,6 @@ Page({
    */
   onPullDownRefresh: function () {
 
-  },
-  onResize:function(res){
-    console.log("尺寸变化", res.size.windowWidth, res.size.windowHeight)
-     // 新的显示区域宽度
-     // 新的显示区域高度
-     
   },
 
   /**

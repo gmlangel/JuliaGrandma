@@ -9,6 +9,8 @@
       <text class="userinfo-nickname">{{"显示地图"}}</text>
       <button bindtap='showEventTest'>显示“事件处理Demo"</button>
       <button bindtap='showyinyongTest'>import和include</button>
+      <button bindtap='showWebViewTest'>显示webview</button>
+      <button bindtap='showACP'>显示ACP后台</button>
     </block>
   </view>
   <view class="usermotto">

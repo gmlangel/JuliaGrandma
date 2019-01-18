@@ -1,7 +1,10 @@
 <!--pages/mytest/iftest.wxml-->
 <text>if简单演示</text>
 <view class='ifclass1'>
-<view wx:if="{{isHidden}}">目前处于:显示状态</view>
+<view wx:if="{{isHidden}}">目前处于:显示状态
+<canvas id="GmlCan" canvas-id="myCanvas" style="border: 1px solid;" ></canvas>
+</view>
+
 <view wx:else>目前处于:隐藏状态</view>
 <button bindtap='onQiHuanZhuangtaiClick'>切换状态</button>
 </view>

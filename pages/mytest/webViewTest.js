@@ -1,11 +1,11 @@
-// pages/mytest/bbb.js
+// pages/mytest/webViewTest.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isHidden:false
   },
 
   /**
@@ -26,16 +26,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var info = wx.getSystemInfoSync();
-    console.log("开始打印系统信息========>")
-    for(var key in info){
-      console.log(key+":", info[key]);
-    }
-    console.log("打印系统信息结束========>")
-    var wW = info.windowWidth;
-    var wH = info.windowHeight;
-    console.log("界面初始化时尺寸",wW,wH);
-
+    // wx.setNavigationBarColor({
+    //   frontColor: '#ffffff',
+    //   backgroundColor: '#ff6600',
+    //   animation: {
+    //     duration: 2400,
+    //     timingFunc: 'easeIn'
+    //   }
+    // })
+    let self = this;
+    let tid = setTimeout(function(){
+      self.setData({
+        isHidden:true
+      })
+      clearTimeout(tid);
+    },2000)
   },
 
   /**
@@ -57,12 +62,6 @@ Page({
    */
   onPullDownRefresh: function () {
 
-  },
-  onResize:function(res){
-    console.log("尺寸变化", res.size.windowWidth, res.size.windowHeight)
-     // 新的显示区域宽度
-     // 新的显示区域高度
-     
   },
 
   /**
