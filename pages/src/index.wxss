@@ -1,0 +1,10 @@
+/* pages/src/index.wxss */
+.currentSearch{
+  color:#ff0000;
+  height: 30px;
+  line-height: 30px;
+  margin:5px 5px 5px 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+}

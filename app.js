@@ -1,11 +1,6 @@
 //app.js
 App({
   onLaunch: function () {
-
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#ff6600'
-    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

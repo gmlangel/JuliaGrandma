@@ -1,52 +1,56 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/mytest/bbb",
-    "pages/mytest/fortest",
-    "pages/mytest/iftest",
-    "pages/mytest/templatetest",
-    "pages/mytest/eventTest",
-    "pages/mytest/yinyongTest",
-    "pages/mytest/webViewTest",
-    "pages/mytest/ACP"
+    "pages/src/index",
+    "juliaClassroom/juliaClassroomIndex",
+    "guowaijingxuan/jingxuanIndex",
+    "taokeba/taokebaIndex",
+    "userCenter/userCenterIndex",
+    "pages/src/kouyudaka",
+    "pages/src/meiriyijv"
   ],
+  "resizable": true,
   "window": {
-    "navigationBarBackgroundColor": "#ff6600",
+    "navigationBarBackgroundColor": "#ff0000",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "default",
     "backgroundTextStyle": "light",
     "backgroundColor": "#333333",
     "enablePullDownRefresh": true,
-    "pageOrientation": "auto"
+    "pageOrientation": "portrait"
   },
   "tabBar": {
     "color": "#fff",
-    "selectedColor": "#ff0000",
-    "backgroundColor": "#000",
+    "selectedColor": "#fff",
+    "backgroundColor": "#ff0000",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/src/index",
         "text": "首页",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "pages/mytest/iftest",
-        "text": "if",
+        "pagePath": "juliaClassroom/juliaClassroomIndex",
+        "text": "Julia课堂",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "pages/mytest/fortest",
-        "text": "for",
+        "pagePath": "taokeba/taokebaIndex",
+        "text": "滔客吧",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "pages/mytest/templatetest",
-        "text": "模板",
+        "pagePath": "guowaijingxuan/jingxuanIndex",
+        "text": "国外精选",
+        "iconPath": "./assets/testIcon.png",
+        "selectedIconPath": "./assets/testIconSel.png"
+      },
+      {
+        "pagePath": "userCenter/userCenterIndex",
+        "text": "我的",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       }
@@ -63,7 +67,7 @@
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+      "desc": "您的位置信息将用于搜索到更新更好玩的内容"
     }
   }
 }
