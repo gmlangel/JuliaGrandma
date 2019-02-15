@@ -1,6 +1,6 @@
 <!--pages/src/index.wxml-->
 <!--顶部内容-->
-<view style='background-color:#ff0000;'>
+<view style='background-color:#44b549;'>
 <view id='btn_search' class='currentSearch' style='float:left;width:{{searchWidth}};' catch:tap='onSearchClick'>搜索</view>
 <image src='../../assets/testIcon.png' class='iconImg' style='margin-top:5px;margin-right:5px;' catch:tap='onBtn_meiriyijvClick'></image>
 <image src='../../assets/testIconSel.png' class='iconImg' style='margin-top:5px;margin-right:5px;' catch:tap='onBtn_kouyudakaClick'></image>
