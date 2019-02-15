@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    "searchWidth":"100px"
+    "searchWidth":"100px",
+    imgUrls: [
+      'https://www.juliaol.cn/mainsceneMap_113.png',
+      'https://www.juliaol.cn/mainsceneMap_139.png',
+      'https://www.juliaol.cn/mainsceneMap_141.png'
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000
   },
 
   /**
@@ -86,6 +95,26 @@ Page({
   onBtn_kouyudakaClick: function () {
     wx.navigateTo({
       url: '/pages/src/kouyudaka',
+    })
+  },
+  changeIndicatorDots(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange(e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange(e) {
+    this.setData({
+      duration: e.detail.value
     })
   }
 })
