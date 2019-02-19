@@ -3,8 +3,12 @@
   color:#44b549;
   height: 30px;
   line-height: 30px;
-  margin:5px 5px 5px 10px;
+  margin:5px 5px 5px 10rpx;
   text-align: center;
   background-color: #fff;
   border-radius: 15px;
 }
+
+ .swiperStyle{
+  height: 180px;
+} 

@@ -6,30 +6,35 @@ Page({
    */
   data: {
     "searchWidth":"100px",
+    screenWidth:100,
     imgUrls: [
       'https://www.juliaol.cn/mainsceneMap_113.png',
       'https://www.juliaol.cn/mainsceneMap_139.png',
       'https://www.juliaol.cn/mainsceneMap_141.png'
     ],
-    indicatorDots: false,
-    autoplay: false,
+    indicatorDots: true,
+    autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 333
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let screenWidth = wx.getSystemInfoSync().windowWidth;
     //自适应搜索框的宽度
     this.setData({
-      "searchWidth": (wx.getSystemInfoSync().windowWidth - 85) + "px"
+      "searchWidth": (screenWidth - 85) + "px",
+      "screenWidth": screenWidth
     })
     let self = this;
     wx.onWindowResize(function (res) {
+      screenWidth = wx.getSystemInfoSync().windowWidth;
       //自适应搜索框的宽度
       self.setData({
-        "searchWidth": (wx.getSystemInfoSync().windowWidth - 75) + "px"
+        "searchWidth": (screenWidth - 85) + "px",
+        "screenWidth": screenWidth
       })
     })
   },
@@ -97,24 +102,7 @@ Page({
       url: '/pages/src/kouyudaka',
     })
   },
-  changeIndicatorDots(e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay(e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange(e) {
-    this.setData({
-      duration: e.detail.value
-    })
+  onLunBoImgClick:function(evt){
+    console.log(evt.target.dataset.imgid);
   }
 })
