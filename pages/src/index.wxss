@@ -12,11 +12,23 @@
 }
 
  .swiperStyle{
-  height: 360rpx;
+  height: 260rpx;
+  padding-top:20rpx;
+  background-color: #fff;
 } 
-.swiperStyle image{
-  width: 750rpx;
-  max-width: 750rpx;
+.swiperStyle-image{
+  border-radius: 20rpx;
+  margin-left:20rpx;
+  width: 580rpx;
+  max-width: 580rpx;
+  height: 260rpx;
+} 
+
+.swiperStyle-image2{
+  border-radius: 20rpx;
+  width: 600rpx;
+  max-width: 600rpx;
+  height: 260rpx;
 } 
 
 .iconImgPosition{margin-top:10rpx;margin-right:10rpx;}
