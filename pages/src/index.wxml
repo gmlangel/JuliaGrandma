@@ -1,22 +1,51 @@
 <!--pages/src/index.wxml-->
 <!--顶部内容-->
 <view style='background-color:#44b549;'>
-<view id='btn_search' class='currentSearch' style='float:left;width:{{searchWidth}};' catch:tap='onSearchClick'>搜索</view>
-<image src='../../assets/testIcon.png' class='iconImg' style='margin-top:5px;margin-right:5px;' catch:tap='onBtn_meiriyijvClick'></image>
-<image src='../../assets/testIconSel.png' class='iconImg' style='margin-top:5px;margin-right:5px;' catch:tap='onBtn_kouyudakaClick'></image>
+  <view id='btn_search' class='currentSearch' catch:tap='onSearchClick'>搜索</view>
+  <image src='../../assets/testIcon.png' class='iconImg iconImgPosition' catch:tap='onBtn_meiriyijvClick'></image>
+  <image src='../../assets/testIconSel.png' class='iconImg iconImgPosition' catch:tap='onBtn_kouyudakaClick'></image>
 </view>
 <!--页面内容-->
 <!--轮播图-->
-<swiper
-  indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}"
-  interval="{{interval}}"
-  duration="{{duration}}"
-  class='swiperStyle'
->
-  <block wx:for="{{imgUrls}}">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiperStyle'>
+  <block wx:for="{{lunboImgUrls}}">
     <swiper-item>
-      <image data-imgid="{{index}}" catch:tap="onLunBoImgClick" src="{{item}}" style='width:{{screenWidth}}px;'/>
+      <image data-imgid="{{index}}" catch:tap="onLunBoImgClick" src="{{item}}" />
     </swiper-item>
   </block>
 </swiper>
+<!--内容推荐-->
+<view wx:if="{{content.length > 0}}" class="contentInfo">
+  <block wx:for="{{content}}" for-index="i" wx:for-item="item">
+    <view class='content-title'>{{item.title}}</view>
+    <view class='content-subitem' wx:for="{{item.arr}}" for-index="j" wx:for-item="subItem">
+      <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-group'>{{subItem.group}}</view>
+        <view class='content-subitem-des'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+      </view>
+    </view>
+    <view wx:if="{{i<content.length - 1}}" class='content-subitem-line'></view>
+    <view wx:else class='content-subitem-noline'></view>
+  </block>
+</view>
+<view class='contentNormalInfo' wx:else>
+  <view class='tip'>没有更多的内容了,</view>
+  <view>Julia正在努力开发中。。。</view>
+</view>
+<!--底部内容-->
+<view class='foot fl'>
+  <view>{{footInfo.comName}}</view>
+  <view>{{footInfo.backupInfo}}</view>
+  <view>{{footInfo.icpBackupInfo}}</view>
+</view>
+<view class='foot fr'>
+  <view>联系电话:</view>
+  <view>{{connectNumber}}</view>
+</view>

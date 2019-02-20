@@ -1,4 +1,10 @@
 /**app.wxss**/
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #44b549;
+}
+
 .container {
   height: 100%;
   display: flex;
@@ -11,9 +17,9 @@
 } 
 view{
   font-family: "微软雅黑";
-  font-size:16px;
+  font-size:32rpx;
 }
 .iconImg{
-  width: 30px;
-  height: 30px;
+  width: 60rpx;
+  height: 60rpx;
 }

@@ -1,14 +1,116 @@
 /* pages/src/index.wxss */
 .currentSearch{
   color:#44b549;
-  height: 30px;
-  line-height: 30px;
-  margin:5px 5px 5px 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin:10rpx 10rpx 10rpx 20rpx;
   text-align: center;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 30rpx;
+  float:left;
+  width:580rpx;
 }
 
  .swiperStyle{
-  height: 180px;
+  height: 360rpx;
 } 
+.swiperStyle image{
+  width: 750rpx;
+  max-width: 750rpx;
+} 
+
+.iconImgPosition{margin-top:10rpx;margin-right:10rpx;}
+
+.contentInfo{
+  background-color: #fff;
+  min-height: 480rpx;
+  padding-top: 10rpx;
+}
+.contentNormalInfo{
+  background-color: #fff;
+  min-height: 480rpx;
+  text-align: center;
+}
+
+.contentNormalInfo .tip{
+  padding-top: 180rpx;
+}
+.content-title{
+  font-size: 36rpx;
+  padding-left: 20rpx;
+}
+
+.content-subitem{
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+}
+.content-subitem-img{
+  max-width: 160rpx;
+  max-height: 160rpx;
+  float: left;
+}
+.content-subitem-name{
+  float: left;
+  padding-left:20rpx;
+  max-width: 200rpx;
+}
+
+.content-subitem-des{
+  font-size: 26rpx;
+  color: #999999;
+  float: left;
+  padding-left:20rpx;
+  padding-top: 6rpx;
+  max-width: 500rpx;
+}
+
+.content-subitem-group{
+  float:right;
+  margin-right: 30rpx;
+  color: #fff;
+  padding: 5rpx;
+  border-radius: 5rpx;
+  background-color:#44b549; 
+  font-size: 24rpx;
+}
+.content-subitem-space{
+  clear: both;
+}
+
+.content-subitem-line{
+  height: 5rpx;
+  border-top-width: 1rpx;
+  border-top-color:#666;
+  border-top-style: solid;
+  margin: 20rpx auto;
+  width: 90%;
+}
+.content-subitem-noline{
+  height: 20rpx;
+}
+.foot{
+  float: left;
+  min-height: 100rpx;
+  padding-left: 30rpx;
+  padding-top: 10rpx;
+  margin-bottom: 20px;
+  margin-top:20rpx;
+  color: #fff;
+}
+
+.foot view{
+  font-size: 24rpx;
+}
+
+.fl{
+  width: 400rpx;
+  text-align: center;
+}
+
+.fr{
+  border-left-width: 2rpx;
+  border-left-style: solid;
+  border-left-color: #fff;
+  width: 260rpx;
+  right: 30rpx;
+}

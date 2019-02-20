@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"Julia Grandma"
+  "navigationBarTitleText":"Julia Grandma",
+  "backgroundColor":"#44b549"
 }
