@@ -19,10 +19,28 @@ Page({
         { name: "测试信息1", group: "Julia课堂", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des:"这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信",link:"url1"},
         { name: "测试信息2", group: "滔客吧", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2"},
         { name: "测试信息3", group: "国外精选", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3"}
-      ]}/*,
-      { title: "Julia课堂" },
-      { title: "滔客吧"},
-      { title: "国外精选" }*/
+      ]},
+      {
+        title: "Julia课堂", arr: [
+          { name: "测试信息1", group: "", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1" },
+          { name: "测试信息2", group: "", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2" },
+          { name: "测试信息3", group: "", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3" }
+        ]
+      },
+      {
+        title: "滔客吧", arr: [
+          { name: "测试信息1", group: "", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1" },
+          { name: "测试信息2", group: "", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2" },
+          { name: "测试信息3", group: "", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3" }
+        ]
+      },
+      {
+        title: "国外精选", arr: [
+          { name: "测试信息1", group: "", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1" },
+          { name: "测试信息2", group: "", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2" },
+          { name: "测试信息3", group: "", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3" }
+        ]
+      }
     ],
     footInfo:{
       comName:"xxxx混沌科技责任有限公司",

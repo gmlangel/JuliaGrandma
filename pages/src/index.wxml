@@ -16,15 +16,15 @@
 </swiper>
 <!--内容推荐-->
 <view wx:if="{{content.length > 0}}" class="contentInfo">
-  <block wx:for="{{content}}" for-index="i" wx:for-item="item">
+  <block wx:for="{{content}}" wx:for-index="i" wx:for-item="item">
     <view class='content-title'>{{item.title}}</view>
-    <view class='content-subitem' wx:for="{{item.arr}}" for-index="j" wx:for-item="subItem">
+    <view class='content-subitem' wx:for="{{item.arr}}" wx:for-index="j" wx:for-item="subItem">
       <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
         <image class='content-subitem-img' src='{{subItem.icon}}'></image>
         <view class='content-subitem-name'>
           {{subItem.name}}
         </view>
-        <view class='content-subitem-group'>{{subItem.group}}</view>
+        <view class='content-subitem-group' style='display:{{(subItem.group || "") == "" ? "none" : "block"}}'>{{subItem.group}}</view>
         <view class='content-subitem-des'>
           <text>{{subItem.des}}</text>
         </view>
@@ -40,12 +40,14 @@
   <view>Julia正在努力开发中。。。</view>
 </view>
 <!--底部内容-->
-<view class='foot fl'>
+<view class='foot'>
+<view class='fl'>
   <view>{{footInfo.comName}}</view>
   <view>{{footInfo.backupInfo}}</view>
   <view>{{footInfo.icpBackupInfo}}</view>
 </view>
-<view class='foot fr'>
+<view class='fr'>
   <view>联系电话:</view>
   <view>{{connectNumber}}</view>
+</view>
 </view>

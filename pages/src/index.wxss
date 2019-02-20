@@ -83,18 +83,14 @@
   border-top-color:#666;
   border-top-style: solid;
   margin: 20rpx auto;
-  width: 90%;
+  width: 86%;
 }
 .content-subitem-noline{
   height: 20rpx;
 }
 .foot{
-  float: left;
-  min-height: 100rpx;
-  padding-left: 30rpx;
-  padding-top: 10rpx;
-  margin-bottom: 20px;
-  margin-top:20rpx;
+  min-height: 140rpx;
+  padding-top: 30rpx;
   color: #fff;
 }
 
@@ -103,14 +99,18 @@
 }
 
 .fl{
-  width: 400rpx;
+  float: left;
+  width: 500rpx;
   text-align: center;
 }
 
 .fr{
+  float: left;
   border-left-width: 2rpx;
   border-left-style: solid;
   border-left-color: #fff;
-  width: 260rpx;
+  width: 200rpx;
   right: 30rpx;
+  min-height: 100rpx;
+  padding-left: 30rpx;
 }
