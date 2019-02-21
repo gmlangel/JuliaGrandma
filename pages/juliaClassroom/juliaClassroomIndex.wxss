@@ -1,1 +1,58 @@
 /* juliaClassroom/juliaClassroomIndex.wxss */
+.searchBarContainer{
+  background-color:#ededed;
+}
+
+.currentSearch{
+  color:#999;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin:10rpx 10rpx 20rpx 10rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+
+.containerView{
+  background-color: #fff;
+}
+.categroyScrollViewStyle{
+  white-space: nowrap;
+  height: 200rpx;
+}
+
+.categroyItem{
+  /* display: inline-block;我用自己的方法屏蔽掉了这个限制 */
+  float: left;
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 30rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.categroyItem-end{
+  margin-right: 30rpx;
+}
+/* 一下样式配合使用，可以实现在scrollview视图中的多行文本垂直居中 */
+.categroyItem-sub{
+  display: table;
+  width: 180rpx;
+  height: 180rpx;
+}
+.categroyItem-subtext{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 180rpx;
+  white-space:pre-wrap;
+}
+/*垂直居中样式结束*/
+
+.content-title{
+  color: #333;
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 20rpx;
+}

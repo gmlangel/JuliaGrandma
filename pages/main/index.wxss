@@ -81,6 +81,7 @@
   padding-left:20rpx;
   padding-top: 6rpx;
   max-width: 500rpx;
+  word-wrap:break-word;
 }
 
 .content-subitem-group{

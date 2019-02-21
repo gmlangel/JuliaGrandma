@@ -1,2 +1,20 @@
 <!--juliaClassroom/juliaClassroomIndex.wxml-->
-<text>juliaClassroom/juliaClassroomIndex.wxml</text>
+<view class='searchBarContainer'>
+  <view class='currentSearch' catch:tap='onSearchClick'>搜索</view>
+</view>
+<!--内容-->
+<view class='containerView'>
+  <view class='content-title'>分类</view>
+  <scroll-view class="categroyScrollViewStyle" scroll-x="true">
+    <view style='width:2000rpx'>
+      <block wx:for="{{categroyInfo}}">
+        <view class="categroyItem" data-id="{{index}}" catchtap='onCateGroyItemClick' style='background:{{item.color}}'>
+          <view class='categroyItem-sub'>
+            <view class='categroyItem-subtext'>{{item.name}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+

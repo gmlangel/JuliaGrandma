@@ -55,6 +55,14 @@ Page({
    */
   onLoad: function (options) {
     let screenWidth = wx.getSystemInfoSync().windowWidth;
+    // let self = this;
+    
+    // setInterval(function(){
+    //   self.data.content[0].title = "Hot" + new Date().getSeconds();
+    //   self.setData({
+    //     content: self.data.content
+    //   });
+    // },1000);
     // //自适应搜索框的宽度
     // this.setData({
     //   "searchWidth": (screenWidth - 85) + "rpx",
