@@ -2,7 +2,7 @@
 page {
   display: block;
   min-height: 100%;
-  background-color: #44b549;
+  background-color: #ededed;
 }
 
 .container {

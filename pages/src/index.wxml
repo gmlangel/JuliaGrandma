@@ -1,6 +1,6 @@
 <!--pages/src/index.wxml-->
 <!--顶部内容-->
-<view style='background-color:#44b549;'>
+<view class='searchBarContainer'>
   <view id='btn_search' class='currentSearch' catch:tap='onSearchClick'>搜索</view>
   <image src='../../assets/testIcon.png' class='iconImg iconImgPosition' catch:tap='onBtn_meiriyijvClick'></image>
   <image src='../../assets/testIconSel.png' class='iconImg iconImgPosition' catch:tap='onBtn_kouyudakaClick'></image>

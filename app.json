@@ -10,19 +10,19 @@
   ],
   "resizable": true,
   "window": {
-    "navigationBarBackgroundColor": "#44b549",
+    "navigationBarBackgroundColor": "#ededed",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationStyle": "default",
     "backgroundTextStyle": "light",
-    "backgroundColor": "#333333",
+    "backgroundColor": "#ededed",
     "enablePullDownRefresh": true,
     "pageOrientation": "portrait"
   },
   "tabBar": {
-    "color": "#fff",
-    "selectedColor": "#fff",
-    "backgroundColor": "#44b549",
+    "color": "#333",
+    "selectedColor": "#23c560",
+    "backgroundColor": "#ededed",
     "list": [
       {
         "pagePath": "pages/src/index",
