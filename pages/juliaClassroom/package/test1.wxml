@@ -1,0 +1,3 @@
+<!--pages/juliaClassroom/pages/test1.wxml-->
+<text>{{timeStr}}</text>
+<image src='/assets/testIcon.png'></image>

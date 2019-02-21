@@ -125,22 +125,29 @@ Page({
   /*显示每日一句*/
   onBtn_meiriyijvClick: function () {
     wx.navigateTo({
-      url: '/pages/src/meiriyijv',
+      url: '/pages/main/meiriyijv',
     })
   },
   /*显示口语打卡*/
   onBtn_kouyudakaClick: function () {
     wx.navigateTo({
-      url: '/pages/src/kouyudaka',
+      url: '/pages/main/kouyudaka',
     })
   },
   onLunBoImgClick:function(evt){
     console.log(evt.target.dataset.imgid);
   },
   onContentSubitemClick:function(evt){
-    console.log(evt.currentTarget.dataset.arg);
-    wx.navigateTo({
-      url: '/juliaClassroom/juliaClassroomIndex',
-    })
+    let arg = evt.currentTarget.dataset.arg
+    //console.log(evt.currentTarget.dataset.arg);
+    if(arg == "url1"){
+      wx.navigateTo({
+        url: '/pages/juliaClassroom/package/test1?arg1=13&arg2=' + arg
+      })
+    }else{
+      wx.switchTab({
+        url: '/pages/juliaClassroom/juliaClassroomIndex',
+      })
+    }
   }
 })

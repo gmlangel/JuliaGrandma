@@ -1,12 +1,37 @@
 {
   "pages": [
-    "pages/src/index",
-    "juliaClassroom/juliaClassroomIndex",
-    "guowaijingxuan/jingxuanIndex",
-    "taokeba/taokebaIndex",
-    "userCenter/userCenterIndex",
-    "pages/src/kouyudaka",
-    "pages/src/meiriyijv"
+    "pages/main/index",
+    "pages/juliaClassroom/juliaClassroomIndex",
+    "pages/guowaijingxuan/jingxuanIndex",
+    "pages/taokeba/taokebaIndex",
+    "pages/userCenter/userCenterIndex",
+    "pages/main/kouyudaka",
+    "pages/main/meiriyijv"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/juliaClassroom/package",
+      "name": "juliaClassroom",
+      "pages": ["test1"]
+    },
+    {
+      "root": "pages/guowaijingxuan/package",
+      "name": "guowaijingxuan",
+      "pages": [
+      ]
+    },
+    {
+      "root": "pages/taokeba/package",
+      "name": "taokeba",
+      "pages": [
+      ]
+    },
+    {
+      "root": "pages/userCenter/package",
+      "name": "userCenter",
+      "pages": [
+      ]
+    }
   ],
   "resizable": true,
   "window": {
@@ -25,31 +50,31 @@
     "backgroundColor": "#ededed",
     "list": [
       {
-        "pagePath": "pages/src/index",
+        "pagePath": "pages/main/index",
         "text": "首页",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "juliaClassroom/juliaClassroomIndex",
+        "pagePath": "pages/juliaClassroom/juliaClassroomIndex",
         "text": "Julia课堂",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "taokeba/taokebaIndex",
+        "pagePath": "pages/taokeba/taokebaIndex",
         "text": "滔客吧",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "guowaijingxuan/jingxuanIndex",
+        "pagePath": "pages/guowaijingxuan/jingxuanIndex",
         "text": "国外精选",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "userCenter/userCenterIndex",
+        "pagePath": "pages/userCenter/userCenterIndex",
         "text": "我的",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
