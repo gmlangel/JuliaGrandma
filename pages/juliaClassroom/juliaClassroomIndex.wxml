@@ -4,10 +4,11 @@
 </view>
 <!--内容-->
 <view class='containerView'>
-  <view class='content-title'>分类</view>
+  <!-- 栏目：分类 -->
+  <view class='content-title'>{{categroyInfo.title}}</view>
   <scroll-view class="categroyScrollViewStyle" scroll-x="true">
     <view style='width:2000rpx'>
-      <block wx:for="{{categroyInfo}}">
+      <block wx:for="{{categroyInfo.arr}}">
         <view class="categroyItem" data-id="{{index}}" catchtap='onCateGroyItemClick' style='background:{{item.color}}'>
           <view class='categroyItem-sub'>
             <view class='categroyItem-subtext'>{{item.name}}</view>
@@ -16,5 +17,31 @@
       </block>
     </view>
   </scroll-view>
+  <!-- 栏目：热门课程 -->
+  <view class='content-title'>{{hot.title}}</view>
+  <block  wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
+  <view class='content-subitem' wx:if="{{j<3}}">
+    <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+      <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+      <view class='content-subitem-name'>
+        {{subItem.name}}
+      </view>
+      <view class='content-subitem-group' style='display:{{makeGroupStyle(subItem.group || "") == "" ? "none" : "block"}};background-Color:{{subItem.color}};'>{{subItem.group}}</view>
+      <view class='content-subitem-des'>
+        <text>{{subItem.des}}</text>
+      </view>
+      <view class='content-subitem-space'></view>
+    </view>
+  </view>
+  </block>
+  <view class='space-line'></view>
+  
+  <!-- 栏目：精彩瞬间 -->
+  <view class='content-title'>{{wonderfulInfo.title}}</view>
+  <scroll-view class="wonderfulScrollViewStyle" scroll-x="true">
+      <block wx:for="{{wonderfulInfo.arr}}">
+        <image src='{{item.imgURL}}' catchtap='onwonderfulInfoItemClick' class="wonderfulItem" data-id="{{item.id}}"></image>
+      </block>
+  </scroll-view>
+  <view class='space-line'></view>
 </view>
-

@@ -56,3 +56,22 @@
   font-weight: bold;
   padding: 20rpx;
 }
+
+.space-line{
+  height: 20rpx;
+}
+
+.wonderfulScrollViewStyle{
+  white-space: nowrap;
+  height: 280rpx;
+}
+
+.wonderfulItem{
+  display: inline-block;
+  width: 420rpx;
+  max-width: 420rpx;
+  height: 280rpx;
+  margin-left: 30rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}

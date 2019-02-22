@@ -12,25 +12,24 @@
     {
       "root": "pages/juliaClassroom/package",
       "name": "juliaClassroom",
-      "pages": ["test1"]
+      "pages": [
+        "test1","wonderfulVideo"
+      ]
     },
     {
       "root": "pages/guowaijingxuan/package",
       "name": "guowaijingxuan",
-      "pages": [
-      ]
+      "pages": []
     },
     {
       "root": "pages/taokeba/package",
       "name": "taokeba",
-      "pages": [
-      ]
+      "pages": []
     },
     {
       "root": "pages/userCenter/package",
       "name": "userCenter",
-      "pages": [
-      ]
+      "pages": []
     }
   ],
   "resizable": true,
