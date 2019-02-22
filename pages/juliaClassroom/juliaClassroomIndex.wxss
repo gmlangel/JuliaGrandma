@@ -26,7 +26,7 @@
   float: left;
   width: 180rpx;
   height: 180rpx;
-  margin-left: 30rpx;
+  margin-left: 40rpx;
   color: #fff;
   border-radius: 10rpx;
 }
@@ -57,6 +57,12 @@
   padding: 20rpx;
 }
 
+.content-more{
+  color: #333;
+  padding: 20rpx;
+  float: right;
+}
+
 .space-line{
   height: 20rpx;
 }
@@ -71,7 +77,51 @@
   width: 420rpx;
   max-width: 420rpx;
   height: 280rpx;
-  margin-left: 30rpx;
+  margin-left: 40rpx;
   color: #fff;
   border-radius: 10rpx;
+}
+
+.content-subitem-des{
+  font-size: 26rpx;
+  float: left;
+  padding-left:20rpx;
+  padding-top: 6rpx;
+  max-width: 500rpx;
+  min-width: 500rpx;
+  word-wrap:break-word; 
+}
+.gmldescription{
+  color: #999999;
+  overflow: hidden;
+  height: 70rpx;
+}
+.gmltime{
+  color: #333;
+}
+
+.leaderBoard-item{
+  height: 40rpx;
+  margin-left:40rpx;
+  padding:10rpx 0rpx 10rpx 0rpx;
+  font-size: 26rpx;
+  text-align: left;
+  color: #333;
+}
+.leaderBoade-item-name{
+  float:left;
+  width:390rpx;
+  font-weight: bold;
+}
+
+.leaderBoade-item-star{
+  float:left;
+  width:220rpx;
+  max-width:220rpx;
+  overflow:hidden;
+  color:#999;
+}
+.leaderBoade-item-top{
+  float:left;
+  width:100rpx; 
 }

@@ -18,30 +18,53 @@
     </view>
   </scroll-view>
   <!-- 栏目：热门课程 -->
-  <view class='content-title'>{{hot.title}}</view>
-  <block  wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
-  <view class='content-subitem' wx:if="{{j<3}}">
-    <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
-      <image class='content-subitem-img' src='{{subItem.icon}}'></image>
-      <view class='content-subitem-name'>
-        {{subItem.name}}
+  <view class='content-title' style='float:left;'>{{hot.title}}</view>
+  <view wx:if="{{hot.arr.length > 3}}" class='content-more' catch:tap="onMoreClick" data-type="hot">更多</view>
+  <view style='clear:both;'></view>
+  <block wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem' wx:if="{{j<3}}">
+      <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-group' style='display:{{(subItem.group || "") == "" ? "none" : "block"}};background-color:{{subItem.color}};'>{{subItem.group}}</view>
+        <view class='content-subitem-des gmltime'>{{subItem.timeStr}}</view>
+        <view class='content-subitem-des gmldescription'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
       </view>
-      <view class='content-subitem-group' style='display:{{makeGroupStyle(subItem.group || "") == "" ? "none" : "block"}};background-Color:{{subItem.color}};'>{{subItem.group}}</view>
-      <view class='content-subitem-des'>
-        <text>{{subItem.des}}</text>
-      </view>
-      <view class='content-subitem-space'></view>
     </view>
-  </view>
   </block>
   <view class='space-line'></view>
-  
+
   <!-- 栏目：精彩瞬间 -->
-  <view class='content-title'>{{wonderfulInfo.title}}</view>
+  <view class='content-title' style='float:left;'>{{wonderfulInfo.title}}</view>
+  <view wx:if="{{wonderfulInfo.arr.length >= 5}}" class='content-more' catch:tap="onMoreClick" data-type="wonderful">更多</view>
+  <view style='clear:both;'></view>
   <scroll-view class="wonderfulScrollViewStyle" scroll-x="true">
-      <block wx:for="{{wonderfulInfo.arr}}">
-        <image src='{{item.imgURL}}' catchtap='onwonderfulInfoItemClick' class="wonderfulItem" data-id="{{item.id}}"></image>
-      </block>
+    <block wx:for="{{wonderfulInfo.arr}}">
+      <image wx:if="{{index < 5}}" src='{{item.imgURL}}' catchtap='onwonderfulInfoItemClick' class="wonderfulItem" data-id="{{item.id}}"></image>
+    </block>
   </scroll-view>
   <view class='space-line'></view>
+  <!--栏目:教师排名-->
+  <view class='content-title' style='float:left;'>{{leaderBoard.title}}</view>
+  <view wx:if="{{leaderBoard.arr.length >= 3}}" class='content-more' catch:tap="onMoreClick" data-type="moreTeacher">更多</view>
+  <view style='clear:both;'></view>
+  <block wx:for="{{leaderBoard.arr}}">
+    <view wx:if="{{index < 3}}" class="leaderBoard-item">
+      <view class='leaderBoade-item-name'>{{item.name}}</view>
+      <view class='leaderBoade-item-star'>stars:{{item.stars}}</view>
+      <view class='leaderBoade-item-top'>{{"Top"+(index+1)}}</view>
+      <view class='content-subitem-space'></view>
+    </view>
+  </block>
+  <!--栏目:实用工具-->
+  <view class='content-title'>{{currentTools.title}}</view>
+  <block wx:for="{{currentTools.arr}}">
+    <image style='width:160rpx;height:160rpx;border-radius:80rpx;margin-left:40rpx;' src="{{item.imgURL}}"></image>
+  </block>
+  <view class='content-subitem-noline'></view>
 </view>

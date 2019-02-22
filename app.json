@@ -13,7 +13,9 @@
       "root": "pages/juliaClassroom/package",
       "name": "juliaClassroom",
       "pages": [
-        "test1","wonderfulVideo"
+        "test1",
+        "wonderfulVideo",
+        "moreInfoListPage"
       ]
     },
     {

@@ -9,6 +9,26 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+const HHMMSS = inteval =>{
+  const date = new Date(parseInt(inteval * 1000))
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+  return [hour, minute, second].map(formatNumber).join(':')
+}
+
+const YYYYMMDDHHMMSS = inteval => {
+  const date = new Date(parseInt(inteval * 1000))
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -157,5 +177,7 @@ var Base64 = {
 
 module.exports = {
   formatTime: formatTime,
-  base64: Base64
+  base64: Base64,
+  HHMMSS: HHMMSS,
+  YYYYMMDDHHMMSS: YYYYMMDDHHMMSS
 }

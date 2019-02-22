@@ -100,6 +100,51 @@ Page({
           "imgURL": "https://www.juliaol.cn/mainsceneMap_141.png"
         }
       ]
+    },
+    leaderBoard:{
+      title:"教室排名",
+      arr:[
+        {
+          "name":"Lucy",
+          "stars":43255,
+          "isUp":true
+        },
+        {
+          "name": "Julia",
+          "stars": 41211,
+          "isUp": false
+        },
+        {
+          "name": "Panel",
+          "stars": 33255,
+          "isUp": true
+        },
+        {
+          "name": "Jack",
+          "stars": 33155,
+          "isUp": true
+        },
+        {
+          "name": "Sun",
+          "stars": 23255,
+          "isUp": true
+        }
+      ]
+    },
+    currentTools:{
+      "title":"实用工具",
+      arr:[
+        {
+          "name":"口语测评",
+          "url":"url1",
+          "imgURL": "https://www.juliaol.cn/mainsceneMap_113.png"
+        },
+        {
+          "name": "小剧场",
+          "url": "url2",
+          "imgURL": "https://www.juliaol.cn/mainsceneMap_141.png"
+        }
+      ]
     }
   },
 
@@ -107,7 +152,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+   let arr = this.data.hot.arr;
+   let self = this;
+   arr.forEach((item,idx)=>{
+     let strfm = self.makeLessonTime(item.startTime,item.endTime)
+     item.timeStr = strfm;
+   });
+   this.setData({
+     hot: this.data.hot
+   })
    
   },
 
@@ -193,5 +246,22 @@ Page({
         url: '/pages/juliaClassroom/package/wonderfulVideo?arg=' + str
       })
     }
+  },
+  /**
+   * 点击更多内容
+  */
+  onMoreClick:function(evt){
+    let arg = evt.currentTarget.dataset.type || "";
+    if(arg != ""){
+      wx.navigateTo({
+        url: '/pages/juliaClassroom/package/moreInfoListPage?type=' + arg
+      })
+    }
+  },
+  /*
+    格式化上课时间字符串
+  */
+  makeLessonTime:function(st,et){
+    return tool.YYYYMMDDHHMMSS(st) + "-" + tool.HHMMSS(et);
   }
 })

@@ -47,7 +47,10 @@ view{
   padding-left:20rpx;
   padding-top: 6rpx;
   max-width: 500rpx;
+  min-width: 500rpx;
   word-wrap:break-word;
+  max-height: 110rpx;
+  overflow: hidden;
 }
 
 .content-subitem-group{
