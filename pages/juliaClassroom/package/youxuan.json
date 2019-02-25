@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "优选"
+  "navigationBarTitleText": "优选",
+  "onReachBottomDistance":-50
 }

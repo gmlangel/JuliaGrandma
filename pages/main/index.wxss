@@ -51,12 +51,7 @@
 .contentNormalInfo .tip{
   padding-top: 180rpx;
 }
-.content-title{
-  color: #333;
-  font-size: 36rpx;
-  font-weight: bold;
-  padding-left: 20rpx;
-}
+
 .foot{
   min-height: 140rpx;
   padding-top: 30rpx;

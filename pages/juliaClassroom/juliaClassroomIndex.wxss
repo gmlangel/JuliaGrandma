@@ -50,18 +50,7 @@
 }
 /*垂直居中样式结束*/
 
-.content-title{
-  color: #333;
-  font-size: 36rpx;
-  font-weight: bold;
-  padding: 20rpx;
-}
 
-.content-more{
-  color: #333;
-  padding: 20rpx;
-  float: right;
-}
 
 .space-line{
   height: 20rpx;
@@ -103,7 +92,7 @@
 .leaderBoard-item{
   height: 40rpx;
   margin-left:40rpx;
-  padding:10rpx 0rpx 10rpx 0rpx;
+  padding-bottom:10rpx;
   font-size: 26rpx;
   text-align: left;
   color: #333;

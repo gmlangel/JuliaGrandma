@@ -1,2 +1,54 @@
 <!--pages/juliaClassroom/package/youxuan.wxml-->
-<text>pages/juliaClassroom/package/youxuan.wxml</text>
+<view class='titleTool'>
+  <view catch:tap="onSwitchClick" data-state="youxuanke" class='switch-tongyong switch-left {{needShowLessonList ? "switch-selected" : "switch-unselected"}}'>优选课</view>
+  <view catch:tap="onSwitchClick" data-state="youxuanjiaoshi" class='switch-tongyong switch-right {{needShowLessonList == false ? "switch-selected" : "switch-unselected"}}'>优选教师</view>
+  <view class='search-button'>搜</view>
+  <view class='content-subitem-space'></view>
+</view>
+<!--内容-->
+<view wx:if='{{needShowLessonList}}' class='containerView'>
+<!-- 栏目：优选课 -->
+<!--热推-->
+  <view class='content-title' style='float:left;'>{{hot.title}}</view>
+  <view wx:if="{{hot.arr.length >= 3}}" class='content-more' catch:tap="onMoreClick" data-type="youxuan">更多</view>
+  <view style='clear:both;'></view>
+  <block wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem' wx:if="{{j<3}}">
+      <view class='content-subitem-container' bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-book'><text style='color:#f00;'>{{subItem.book || 0}}人</text>已预约</view>
+        <view class='content-subitem-des gmltime'>{{subItem.timeStr}}</view>
+        <view class='content-subitem-des gmldescription'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+        <view catch:tap="onBtnBookClick" data-idx="{{j}}" wx:if="{{!!subItem.isBooked}}" class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onBtnBookClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
+      </view>
+    </view>
+  </block>
+  <!--全部-->
+  <view class='content-title'>{{allLesson.title}}</view>
+  <block wx:for="{{allLesson.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem'>
+      <view class='content-subitem-container' bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-book'><text style='color:#f00;'>{{subItem.book || 0}}人</text>已预约</view>
+        <view class='content-subitem-des gmltime'>{{subItem.timeStr}}</view>
+        <view class='content-subitem-des gmldescription'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+        <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" wx:if="{{!!subItem.isBooked}}" class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onBtnBookInAllClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:else>优选教师</view>
