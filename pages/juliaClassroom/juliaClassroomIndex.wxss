@@ -125,3 +125,28 @@
   float:left;
   width:100rpx; 
 }
+
+.toolRow{
+  height:180rpx;
+  margin-bottom:40rpx;
+}
+
+.toolItemContainer{
+  float: left;
+  width:140rpx;
+  height:180rpx;
+  margin-left:40rpx;
+  margin-bottom:40rpx;
+}
+
+.toolItemTitle{
+  overflow: hidden;
+  text-align: center;
+  color: #333;
+}
+
+.toolItemImg{
+  width:140rpx;
+  height:140rpx;
+  border-radius:70rpx;
+}

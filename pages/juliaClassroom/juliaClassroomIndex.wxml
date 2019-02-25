@@ -63,8 +63,13 @@
   </block>
   <!--栏目:实用工具-->
   <view class='content-title'>{{currentTools.title}}</view>
+  <view style='height:{{currentTools.height}}rpx;'>
   <block wx:for="{{currentTools.arr}}">
-    <image style='width:160rpx;height:160rpx;border-radius:80rpx;margin-left:40rpx;' src="{{item.imgURL}}"></image>
+    <view class='toolItemContainer'>
+    <image class='toolItemImg' src="{{item.imgURL}}" catch:tap="onToolItemClick" data-url="{{item.url}}"></image>
+    <view class='toolItemTitle'>{{item.name}}</view>
+    </view>
   </block>
+  </view>
   <view class='content-subitem-noline'></view>
 </view>

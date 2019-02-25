@@ -133,11 +133,27 @@ Page({
     },
     currentTools:{
       "title":"实用工具",
+      height:0,
       arr:[
         {
           "name":"口语测评",
           "url":"url1",
           "imgURL": "https://www.juliaol.cn/mainsceneMap_113.png"
+        },
+        {
+          "name": "小剧场",
+          "url": "url2",
+          "imgURL": "https://www.juliaol.cn/mainsceneMap_141.png"
+        },
+        {
+          "name": "小剧场",
+          "url": "url2",
+          "imgURL": "https://www.juliaol.cn/mainsceneMap_141.png"
+        },
+        {
+          "name": "小剧场",
+          "url": "url2",
+          "imgURL": "https://www.juliaol.cn/mainsceneMap_141.png"
         },
         {
           "name": "小剧场",
@@ -158,10 +174,17 @@ Page({
      let strfm = self.makeLessonTime(item.startTime,item.endTime)
      item.timeStr = strfm;
    });
+
+    let j = this.data.currentTools.arr.length;
+    let currentToolsHeight = (parseInt(j / 4) + ((j % 4) > 0 ? 1 : 0)) * 220;
+    this.data.currentTools.height = currentToolsHeight;
    this.setData({
-     hot: this.data.hot
+     hot: this.data.hot,
+     currentTools:this.data.currentTools
    })
    
+    
+
   },
 
   /**
@@ -263,5 +286,11 @@ Page({
   */
   makeLessonTime:function(st,et){
     return tool.YYYYMMDDHHMMSS(st) + "-" + tool.HHMMSS(et);
+  },
+  onToolItemClick:function(evt){
+    let argURL = evt.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: argURL
+    })
   }
 })
