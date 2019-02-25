@@ -1,23 +1,18 @@
-// pages/juliaClassroom/pages/test1.js
-var myTool = require("../../../utils/util.js");
+// pages/juliaClassroom/package/Boutique_small.js  精品小班课
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    "timeStr":"test"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("这是数据", options)
-    let str = myTool.formatTime(new Date());
-    this.setData({
-      "timeStr": str
-    })
+
   },
 
   /**

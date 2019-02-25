@@ -9,7 +9,7 @@
   <scroll-view class="categroyScrollViewStyle" scroll-x="true">
     <view style='width:2000rpx'>
       <block wx:for="{{categroyInfo.arr}}">
-        <view class="categroyItem" data-id="{{index}}" catchtap='onCateGroyItemClick' style='background:{{item.color}}'>
+        <view class="categroyItem" data-url="{{item.url}}" catchtap='onCateGroyItemClick' style='background:{{item.color}}'>
           <view class='categroyItem-sub'>
             <view class='categroyItem-subtext'>{{item.name}}</view>
           </view>

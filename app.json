@@ -13,9 +13,11 @@
       "root": "pages/juliaClassroom/package",
       "name": "juliaClassroom",
       "pages": [
-        "test1",
         "wonderfulVideo",
-        "moreInfoListPage"
+        "moreInfoListPage",
+        "youxuan",
+        "Boutique_smallLesson",
+        "Public_Lesson"
       ]
     },
     {

@@ -11,38 +11,20 @@ Page({
       arr: [
         {
           "id": 0,
-          "name": "Julia精品小班课",
-          "url": "url1",
-          "color": "#ff0000"
-        },
-        {
-          "id": 1,
-          "name": "优选教师课",
-          "url": "url2",
-          "color": "#44b549"
-        },
-        {
-          "id": 2,
-          "name": "Julia公开课",
-          "url": "url3",
-          "color": "#4eb8fb"
-        },
-        {
-          "id": 0,
           "name": "Julia精品\n小班课",
-          "url": "url4",
+          "url": "/pages/juliaClassroom/package/Boutique_smallLesson",
           "color": "#ff0000"
         },
         {
           "id": 1,
           "name": "优选教师课",
-          "url": "url5",
+          "url": "/pages/juliaClassroom/package/youxuan",
           "color": "#44b549"
         },
         {
           "id": 2,
           "name": "Julia公开课",
-          "url": "url6",
+          "url": "/pages/juliaClassroom/package/Public_Lesson",
           "color": "#4eb8fb"
         }
       ]
@@ -242,10 +224,11 @@ Page({
     console.log("搜索");
   },
   onCateGroyItemClick:function(evt){
-    let idx = evt.currentTarget.dataset.id;
-    let info = this.data.categroyInfo[idx] || {};
-    let url = info.url
+    let url = evt.currentTarget.dataset.url;
     console.log(url);
+    wx.navigateTo({
+      url: url
+    })
   },
   makeGroupStyle:function(groupName){
     let key = groupName || "";
