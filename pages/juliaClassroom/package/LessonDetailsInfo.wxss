@@ -20,7 +20,7 @@
   color: #fff;
   background-color: #ff0000;
   border-color: #ff0000;
-  margin-left: 160rpx;
+  margin-left: 156rpx;
 }
 
 .btn-joinroom{
@@ -33,10 +33,11 @@
 .btnbook-unbooked{
   color: #44b549;
   border-color: #44b549;
-  margin-left: 250rpx;
+  margin-left: 256rpx;
 }
 
-.content-subitem-des{
+.content-lessonInfo-des{
+  color:#999;
   font-size: 26rpx;
   float: left;
   padding-left:0rpx;
@@ -55,4 +56,56 @@
   max-width: 500rpx;
   min-width: 500rpx;
   overflow: hidden;
+}
+.whitebg{
+  background-color:#fff;
+}
+.pinglunstyle{
+  margin-top:20rpx;
+  text-align: center;
+}
+
+.content-commentary-container{
+  width: 680rpx;
+}
+
+.content-commentary-img{
+  border-radius: 60rpx;
+  max-width: 120rpx;
+  max-height: 120rpx;
+  float: left;
+}
+
+.content-commentary-des{
+  font-size: 26rpx;
+  color: #999999;
+  float: left;
+  padding-left:20rpx;
+  padding-top: 6rpx;
+  max-width: 500rpx;
+  min-width: 500rpx;
+  word-wrap:break-word;
+  max-height: 360rpx;
+  overflow: hidden;
+}
+
+.content-commentary{
+  padding-bottom: 40rpx;
+  padding-left: 40rpx;
+}
+.commentary-input-container{
+  padding: 15rpx 20rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #999;
+}
+.commentary-input-border{
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  height: 60rpx;
+}
+.commentary-input{
+  color: #333;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0rpx 10rpx;
 }

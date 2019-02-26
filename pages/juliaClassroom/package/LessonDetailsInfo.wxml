@@ -1,14 +1,15 @@
 <!--pages/juliaClassroom/package/LessonDetailsInfo.wxml-->
+<!--课程信息部分-->
 <view class='content-subitem-container'>
         <image class='content-subitem-img' src='{{lessonInfo.icon}}'></image>
         <view class='content-subitem-name'>
           {{lessonInfo.name}}
         </view>
         <view class='content-subitem-book'><text style='color:#f00;'>{{lessonInfo.book || 0}}人</text>已预约</view>
-        <view class='content-tongyong'>Teacher:{{lessonInfo.teacherName}}</view>
         <view class='content-tongyong'>{{lessonInfo.ymd}}</view>
         <view class='content-tongyong'>{{lessonInfo.hmsString}}</view>
-        <view class='content-subitem-des'>
+        <view class='content-tongyong'>教师:{{lessonInfo.teacherName}}</view>
+        <view class='content-lessonInfo-des'>
           <text>{{lessonInfo.des}}</text>
         </view>
         <view class='content-subitem-space'></view>
@@ -19,3 +20,30 @@
         </block>
         <view wx:else class='btnbook btnbook-unbooked' catch:tap="onBtnBookClick">预约</view>
       </view>
+<!--评论专区-->
+<view class='whitebg'>
+  <!-- <view class='content-subitem-line'></view> -->
+  <view class='content-title pinglunstyle'>评论</view>
+  <block wx:for="{{commentary}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-commentary'>
+      <view class='content-commentary-container' bind:tap="onCommentaryItemClick" data-arg="{{subItem}}">
+        <image class='content-commentary-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.nickName}}
+        </view>
+        <view class='content-subitem-book'><text style='color:#f00;'>{{subItem.stars}}</text>赞</view>
+        <view class='content-commentary-des'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+      </view>
+    </view>
+  </block>
+</view>
+<!--底部发言工具栏-->
+<view class='commentary-input-container' id="bottomCommentaryTool">
+<view class='commentary-input-border'>
+<input bindconfirm="sendMsg" cursor-spacing="20" class='commentary-input' confirm-type="send" maxlength="500" placeholder="输入评论" value="{{commentaryMSG}}"></input>
+</view>
+  
+</view>

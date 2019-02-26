@@ -6,7 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    commentaryMSG:"",
+    commentary:[
+      { nickName: "Lucy", stars: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信" },
+      { nickName: "Julia", stars: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息" },
+      { nickName: "Panel", stars: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息" },
+      { nickName: "Limi Grantas", stars: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信" }
+    ]
   },
 
   /**
@@ -26,6 +32,7 @@ Page({
     } catch (err) {
       console.log(err);
     }
+
   },
 
   /**
@@ -106,5 +113,33 @@ Page({
     wx.navigateTo({
       url: url + '?arg=' + argStr
     })
+  },
+  /**
+   * 发送评论
+   * 
+  */
+  sendMsg:function(e){
+    let val = e.detail.value.trim();
+    if(val != ""){
+      //清空输入框
+      //更新数据
+      let arr = this.data.commentary;
+      arr.push({ nickName: "Julia", stars: 0, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: val })
+      this.setData({
+        commentary: arr,
+        commentaryMSG:""
+      });
+      //滚动到评论底部
+      wx.createSelectorQuery().select("#bottomCommentaryTool").boundingClientRect(function(rect){
+        wx.pageScrollTo({
+          scrollTop: rect.bottom,
+        })
+      }).exec();
+      
+    }else{
+      this.setData({
+        commentaryMSG: ""
+      });
+    }
   }
 })
