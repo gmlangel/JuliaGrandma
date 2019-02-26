@@ -9,19 +9,35 @@ Page({
     needShowLessonList:true,
     hot: {
       title: "热门课程", arr: [
-        { name: "测试信息1", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息2", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息3", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息1", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", startTime: 1550805237, endTime: 1550808837 }
+        { name: "测试信息1", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信",  startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 }
       ]
     },
     allLesson:{
       title:"全部",
       arr:[
-        { name: "测试信息1", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息2", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", link: "url2", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息3", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", link: "url3", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息1", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", startTime: 1550805237, endTime: 1550808837 }
+        { name: "测试信息1", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信",  startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 }
+      ]
+    },
+    superTeacher: {
+      title: "推荐教师", arr: [
+        { name: "Lucy", stars: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信"},
+        { name: "Julia", stars: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息"},
+        { name: "Panel", stars: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息"},
+        { name: "Limi Grantas", stars: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信"}
+      ]
+    },
+    allTeacher: {
+      title: "全部", arr: [
+        { name: "Lucy", stars: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信" },
+        { name: "Julia", stars: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息"},
+        { name: "Panel", stars: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息"},
+        { name: "Limi Grantas", stars: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信"}
       ]
     }
   },
@@ -95,13 +111,20 @@ Page({
     })
     let myself = this;
     let tid = setTimeout(function(){
-      let allArr = myself.data.allLesson.arr;
+      let allArr = myself.needShowLessonList ? myself.data.allLesson.arr : myself.data.allTeacher.arr;
       //模拟上拉刷新
       let arr = allArr.length > 5 ? allArr.slice(0, 5) : allArr;
       allArr.push(...arr);
-      myself.setData({
-        allLesson: myself.data.allLesson
-      })
+      if (myself.needShowLessonList){
+        myself.setData({
+          allLesson: myself.data.allLesson
+        })
+      }else{
+        myself.setData({
+          allTeacher: myself.data.allTeacher
+        })
+      }
+      
       clearTimeout(tid);
       wx.hideLoading();
       myself.data.isLoading = false;
@@ -160,6 +183,29 @@ Page({
     }
     this.setData({
       allLesson: this.data.allLesson
+    })
+  },
+  /**
+   * 当某个老师被点击
+   * 
+  */
+  onTeacherItemClick: function(evt){
+    let arg = evt.currentTarget.dataset.arg;
+    console.log(arg);
+    let argStr = encodeURI(JSON.stringify(arg));
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/TeacherDetailsInfo?arg=' + argStr
+    })
+  },
+  /**
+   * 当某个课程被点击
+  */
+  onLessonItemClick:function(evt){
+    let arg = evt.currentTarget.dataset.arg;
+    console.log(arg);
+    let argStr = encodeURI(JSON.stringify(arg));
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/LessonDetailsInfo?arg=' + argStr
     })
   }
 })

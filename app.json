@@ -17,7 +17,9 @@
         "moreInfoListPage",
         "youxuan",
         "Boutique_smallLesson",
-        "Public_Lesson"
+        "Public_Lesson",
+        "LessonDetailsInfo",
+        "TeacherDetailsInfo"
       ]
     },
     {

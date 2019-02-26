@@ -56,9 +56,14 @@
 }
 .content-subitem-container{
   width: 685rpx;
-  border:1rpx solid #999;
+  border:1rpx solid #44b549;
   padding-top:20rpx;
   padding-bottom:10rpx;
+  padding-left:20rpx;
+}
+
+.content-subitemTeacher-container{
+  width: 685rpx;
   padding-left:20rpx;
 }
 
@@ -69,14 +74,16 @@
   text-align: center;
   border-radius: 25rpx;
   margin-top: 10rpx;
+  border: 1rpx solid;
 }
 
 .btnbook-booked{
   color: #fff;
   background-color: #ff0000;
+  border-color: #ff0000;
 }
 
 .btnbook-unbooked{
-  color: #fff;
-  background-color: #44b549;
+  color: #44b549;
+  border-color: #44b549;
 }

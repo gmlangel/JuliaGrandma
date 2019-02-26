@@ -10,11 +10,11 @@
 <!-- 栏目：优选课 -->
 <!--热推-->
   <view class='content-title' style='float:left;'>{{hot.title}}</view>
-  <view wx:if="{{hot.arr.length >= 3}}" class='content-more' catch:tap="onMoreClick" data-type="youxuan">更多</view>
+  <view wx:if="{{hot.arr.length >= 3}}" class='content-more' catch:tap="onMoreClick" data-type="youxuanLesson">更多</view>
   <view style='clear:both;'></view>
   <block wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
     <view class='content-subitem' wx:if="{{j<3}}">
-      <view class='content-subitem-container' bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+      <view class='content-subitem-container' bind:tap="onLessonItemClick" data-arg="{{subItem}}">
         <image class='content-subitem-img' src='{{subItem.icon}}'></image>
         <view class='content-subitem-name'>
           {{subItem.name}}
@@ -34,7 +34,7 @@
   <view class='content-title'>{{allLesson.title}}</view>
   <block wx:for="{{allLesson.arr}}" wx:for-index="j" wx:for-item="subItem">
     <view class='content-subitem'>
-      <view class='content-subitem-container' bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+      <view class='content-subitem-container' bind:tap="onLessonItemClick" data-arg="{{subItem}}">
         <image class='content-subitem-img' src='{{subItem.icon}}'></image>
         <view class='content-subitem-name'>
           {{subItem.name}}
@@ -51,4 +51,42 @@
     </view>
   </block>
 </view>
-<view wx:else>优选教师</view>
+<view wx:else class='containerView'>
+<!-- 栏目：优选教师 -->
+<!--推荐教师-->
+  <view class='content-title' style='float:left;'>{{superTeacher.title}}</view>
+  <view wx:if="{{superTeacher.arr.length >= 3}}" class='content-more' catch:tap="onMoreClick" data-type="youxuanTeacher">更多</view>
+  <view style='clear:both;'></view>
+  <block wx:for="{{superTeacher.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem' wx:if="{{j<3}}">
+      <view class='content-subitemTeacher-container' bind:tap="onTeacherItemClick" data-arg="{{subItem}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-book'>Star:<text style='color:#f00;'>{{subItem.stars}}</text></view>
+        <view class='content-subitem-des'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+      </view>
+    </view>
+  </block>
+  <!--全部教师-->
+  <view class='content-title'>{{allTeacher.title}}</view>
+  <block wx:for="{{allTeacher.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem'>
+      <view class='content-subitemTeacher-container' bind:tap="onTeacherItemClick" data-arg="{{subItem}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-subitem-book'>Star:<text style='color:#f00;'>{{subItem.stars}}</text></view>
+        <view class='content-subitem-des'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+      </view>
+    </view>
+  </block>
+</view>
