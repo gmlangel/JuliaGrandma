@@ -19,7 +19,10 @@
         "Boutique_smallLesson",
         "Public_Lesson",
         "LessonDetailsInfo",
-        "TeacherDetailsInfo"
+        "TeacherDetailsInfo",
+        "Classroom_small",
+        "Classroom_youxuan",
+        "Classroom_public"
       ]
     },
     {

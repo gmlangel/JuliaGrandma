@@ -1,4 +1,5 @@
 // pages/juliaClassroom/package/LessonDetailsInfo.js 课程详情页
+var tool = require("../../../utils/util.js")
 Page({
 
   /**
@@ -15,7 +16,13 @@ Page({
     let arg = options.arg || "";
     try {
       let dataObj = JSON.parse(decodeURI(arg));
+      dataObj.ymd = tool.YYYYMMDD(dataObj.startTime)
+      dataObj.hmsString = tool.HHMMSS(dataObj.startTime) + " - " + tool.HHMMSS(dataObj.endTime)
+      dataObj.teacherName = "Julia";
       console.log(dataObj)
+      this.setData({
+        lessonInfo: dataObj
+      })
     } catch (err) {
       console.log(err);
     }
@@ -68,5 +75,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 约课或者取消约课
+   * 
+  */
+  onBtnBookClick: function (evt) {
+    let item = this.data.lessonInfo
+    if (item) {
+      item.isBooked = !!!item.isBooked;
+    }
+    this.setData({
+      lessonInfo: item
+    })
+  },
+  /*
+  当进入教室被点击
+  */
+  onJoinRoomClick:function(evt){
+    let arg = this.data.lessonInfo;
+    let argStr = encodeURI(JSON.stringify(arg));
+    let url = ""
+    if (arg.lessonType == "youxuan"){
+      url = "/pages/juliaClassroom/package/Classroom_youxuan"
+    } else if (arg.lessonType == "public"){
+      url = "/pages/juliaClassroom/package/Classroom_public"
+    }else{
+      url = "/pages/juliaClassroom/package/Classroom_small"
+    }
+    wx.navigateTo({
+      url: url + '?arg=' + argStr
+    })
   }
 })

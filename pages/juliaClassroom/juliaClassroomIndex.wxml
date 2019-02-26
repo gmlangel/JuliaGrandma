@@ -23,12 +23,12 @@
   <view style='clear:both;'></view>
   <block wx:for="{{hot.arr}}" wx:for-index="j" wx:for-item="subItem">
     <view class='content-subitem' wx:if="{{j<3}}">
-      <view bind:tap="onContentSubitemClick" data-arg="{{subItem.link}}">
+      <view bind:tap="onLessonItemClick" data-arg="{{subItem}}">
         <image class='content-subitem-img' src='{{subItem.icon}}'></image>
         <view class='content-subitem-name'>
           {{subItem.name}}
         </view>
-        <view class='content-subitem-group' style='display:{{(subItem.group || "") == "" ? "none" : "block"}};background-color:{{subItem.color}};'>{{subItem.group}}</view>
+        <view class='content-subitem-group' style='display:{{(subItem.lessonType || "") == "" ? "none" : "block"}};background-color:{{subItem.color}};'>{{subItem.lessonTypeName}}</view>
         <view class='content-subitem-des gmltime'>{{subItem.timeStr}}</view>
         <view class='content-subitem-des gmldescription'>
           <text>{{subItem.des}}</text>

@@ -1,2 +1,21 @@
 <!--pages/juliaClassroom/package/LessonDetailsInfo.wxml-->
-<text>pages/juliaClassroom/package/LessonDetailsInfo.wxml</text>
+<view class='content-subitem-container'>
+        <image class='content-subitem-img' src='{{lessonInfo.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{lessonInfo.name}}
+        </view>
+        <view class='content-subitem-book'><text style='color:#f00;'>{{lessonInfo.book || 0}}人</text>已预约</view>
+        <view class='content-tongyong'>Teacher:{{lessonInfo.teacherName}}</view>
+        <view class='content-tongyong'>{{lessonInfo.ymd}}</view>
+        <view class='content-tongyong'>{{lessonInfo.hmsString}}</view>
+        <view class='content-subitem-des'>
+          <text>{{lessonInfo.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+        <block wx:if="{{!!lessonInfo.isBooked}}">
+        <view catch:tap="onBtnBookClick"  class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onJoinRoomClick"class='btnbook btn-joinroom'>进入教室</view>
+        <view class='content-subitem-space'></view>
+        </block>
+        <view wx:else class='btnbook btnbook-unbooked' catch:tap="onBtnBookClick">预约</view>
+      </view>

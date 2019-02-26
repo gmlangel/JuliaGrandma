@@ -31,15 +31,15 @@ Page({
     },
     hot: {
       title: "热门课程", arr: [
-        { name: "测试信息1", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837},
-        { name: "测试信息2", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837},
-        { name: "测试信息3", group: "优选教师", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837},
-        { name: "测试信息1", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息2", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息3", group: "优选教师", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息1", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息2", group: "Julia精品", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837 },
-        { name: "测试信息3", group: "优选教师", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837 }
+        { name: "测试信息1", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837},
+        { name: "测试信息2", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837},
+        { name: "测试信息3", lessonType: "youxuan", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837},
+        { name: "测试信息1", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", lessonType: "youxuan", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", link: "url1", "color": "#ff0000", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", lessonType: "small", icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#ff0000", link: "url2", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", lessonType: "youxuan", icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", "color": "#4eb8fb", link: "url3", startTime: 1550805237, endTime: 1550808837 }
       ]
     },
     wonderfulInfo:{
@@ -154,7 +154,9 @@ Page({
    let self = this;
    arr.forEach((item,idx)=>{
      let strfm = self.makeLessonTime(item.startTime,item.endTime)
+     let lessonTypeName = self.makelessonTypeTip(item.lessonType);
      item.timeStr = strfm;
+     item.lessonTypeName = lessonTypeName;
    });
 
     let j = this.data.currentTools.arr.length;
@@ -275,5 +277,25 @@ Page({
     wx.navigateTo({
       url: argURL
     })
+  },
+  /**
+   * 当某个课程被点击
+  */
+  onLessonItemClick: function (evt) {
+    let arg = evt.currentTarget.dataset.arg;
+    console.log(arg);
+    let argStr = encodeURI(JSON.stringify(arg));
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/LessonDetailsInfo?arg=' + argStr
+    })
+  },
+  makelessonTypeTip:function(lessonType){
+    if (lessonType == "public"){
+      return "Julia公开课"
+    } else if (lessonType == "small") {
+      return "Julia精品"
+    }else{
+      return "优选教师课"
+    }
   }
 })

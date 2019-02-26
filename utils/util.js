@@ -17,6 +17,14 @@ const HHMMSS = inteval =>{
   return [hour, minute, second].map(formatNumber).join(':')
 }
 
+const YYYYMMDD = inteval => {
+  const date = new Date(parseInt(inteval * 1000))
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  return [year, month, day].map(formatNumber).join('-')
+}
+
 const YYYYMMDDHHMMSS = inteval => {
   const date = new Date(parseInt(inteval * 1000))
   const year = date.getFullYear()
@@ -179,5 +187,6 @@ module.exports = {
   formatTime: formatTime,
   base64: Base64,
   HHMMSS: HHMMSS,
-  YYYYMMDDHHMMSS: YYYYMMDDHHMMSS
+  YYYYMMDDHHMMSS: YYYYMMDDHHMMSS,
+  YYYYMMDD: YYYYMMDD
 }

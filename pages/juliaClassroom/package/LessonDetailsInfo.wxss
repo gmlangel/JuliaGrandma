@@ -1,1 +1,58 @@
 /* pages/juliaClassroom/package/LessonDetailsInfo.wxss */
+@import "../juliaClassroomIndex.wxss";
+.content-subitem-container{
+  background-color: #fff;
+  padding:40rpx 30rpx 40rpx 40rpx;
+}
+
+.btnbook{
+  width: 158rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid;
+}
+
+.btnbook-booked{
+  float: left;
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+  margin-left: 160rpx;
+}
+
+.btn-joinroom{
+  float: left;
+  color: #44b549;
+  border-color: #44b549;
+  margin-left: 40rpx;
+}
+
+.btnbook-unbooked{
+  color: #44b549;
+  border-color: #44b549;
+  margin-left: 250rpx;
+}
+
+.content-subitem-des{
+  font-size: 26rpx;
+  float: left;
+  padding-left:0rpx;
+  padding-top: 6rpx;
+  max-width: 680rpx;
+  min-width: 680rpx;
+  word-wrap:break-word; 
+}
+
+.content-tongyong{
+  font-size: 26rpx;
+  float: left;
+  color: #333;
+  padding-left:20rpx;
+  padding-top: 4rpx;
+  max-width: 500rpx;
+  min-width: 500rpx;
+  overflow: hidden;
+}
