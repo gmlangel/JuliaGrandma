@@ -39,6 +39,7 @@
       </view>
     </view>
   </block>
+  <view class='content-subitem-noline'></view>
 </view>
 <!--底部发言工具栏-->
 <view class='commentary-input-container' id="bottomCommentaryTool">

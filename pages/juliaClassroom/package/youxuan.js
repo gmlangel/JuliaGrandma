@@ -111,11 +111,11 @@ Page({
     })
     let myself = this;
     let tid = setTimeout(function(){
-      let allArr = myself.needShowLessonList ? myself.data.allLesson.arr : myself.data.allTeacher.arr;
+      let allArr = myself.data.needShowLessonList ? myself.data.allLesson.arr : myself.data.allTeacher.arr;
       //模拟上拉刷新
       let arr = allArr.length > 5 ? allArr.slice(0, 5) : allArr;
       allArr.push(...arr);
-      if (myself.needShowLessonList){
+      if (myself.data.needShowLessonList){
         myself.setData({
           allLesson: myself.data.allLesson
         })

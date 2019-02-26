@@ -94,6 +94,10 @@
   padding-left: 40rpx;
 }
 .commentary-input-container{
+  position: fixed;
+  z-index: 1000;
+  bottom: 0px;
+  width: 715rpx;
   padding: 15rpx 20rpx;
   background-color: #fff;
   border-top: 1rpx solid #999;
