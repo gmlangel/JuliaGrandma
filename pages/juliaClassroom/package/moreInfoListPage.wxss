@@ -1,1 +1,55 @@
 /* pages/juliaClassroom/package/moreInfoListPage.wxss */
+.label-level{
+  background-color: #ededed;
+}
+.comboxitem{
+  padding:10rpx 20rpx;
+  color: #999;
+}
+.lesson-categroy-container{
+  width:680rpx;
+  background-color:#f00;
+  margin-left:40rpx;
+  margin-top:20rpx;
+  height:220rpx;
+  border-radius:10rpx;
+  color: #fff;
+}
+.lesson-categroy-title{
+  font-size: 36rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+
+.lesson-categroy-des{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  width: 640rpx;
+  max-width: 640rpx;
+  word-wrap: break-word;
+  height: 110rpx;
+  overflow: hidden;
+  text-align: center;
+}
+
+.lesson-categroy-tips{
+  height: 40rpx;
+  line-height: 40rpx;
+  width: 40rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  float: right;
+  margin-right: 20rpx;
+  margin-top:-65rpx;
+  text-align:center;
+  color: #333;
+}
+.lesson-categroy-jiangli{
+  height: 40rpx;
+  line-height: 40rpx;
+  float: right;
+  margin-right: 70rpx;
+  margin-top:-60rpx;
+  text-align:right;
+  font-size: 26rpx;
+}

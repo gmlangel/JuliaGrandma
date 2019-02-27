@@ -36,9 +36,7 @@
   color:#fff;
 }
 
-.containerView{
-  background-color: #fff;
-}
+
 
 .content-subitem{
   padding-left: 25rpx;

@@ -22,7 +22,7 @@
   <!-- 栏目：课程分组列表 -->
   <block wx:for="{{levelGroup}}" wx:for-item="groupItem" wx:for-index="i">
     <view class='content-title' style='float:left;'>{{groupItem.name}}</view>
-    <view wx:if="{{groupItem.arr.length >= 4}}" class='content-more' catch:tap="onMoreClick" data-type="julia_boutique_{{groupItem.argName}}">更多</view>
+    <view wx:if="{{groupItem.arr.length >= 4}}" class='content-more' catch:tap="onMoreClick" data-type="julia_boutique" data-obj="{{groupItem}}">更多</view>
     <view class="content-subitem-space"></view>
     <view style='margin-left:40rpx'>
     <block wx:for="{{groupItem.arr}}">

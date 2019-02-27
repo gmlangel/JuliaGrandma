@@ -39,9 +39,7 @@
   float: left;
   margin-left: 20rpx;
 }
-.containerView{
-  background-color: #fff;
-}
+
 
 .lessonCategoryContainer{
   display: table;

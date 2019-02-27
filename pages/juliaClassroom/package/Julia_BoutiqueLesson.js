@@ -246,9 +246,18 @@ Page({
   onMoreClick: function (evt) {
     let arg = evt.currentTarget.dataset.type || "";
     if (arg != "") {
-      wx.navigateTo({
-        url: '/pages/juliaClassroom/package/moreInfoListPage?type=' + arg
-      })
+      if (arg == "julia_boutique"){
+        let obj = evt.currentTarget.dataset.obj
+        let objstr = encodeURI(JSON.stringify(obj))
+        wx.navigateTo({
+          url: '/pages/juliaClassroom/package/moreInfoListPage?type=' + arg + "&objargs=" + objstr
+        })
+      }else{
+        wx.navigateTo({
+          url: '/pages/juliaClassroom/package/moreInfoListPage?type=' + arg
+        })
+      }
+      
     }
   },
   /*

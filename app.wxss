@@ -126,3 +126,7 @@ view{
 .space-line{
   height: 20rpx;
 }
+
+.containerView{
+  background-color: #fff;
+}

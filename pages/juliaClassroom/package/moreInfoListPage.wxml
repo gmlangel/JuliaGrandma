@@ -1,2 +1,28 @@
 <!--pages/juliaClassroom/package/moreInfoListPage.wxml-->
-<text>pages/juliaClassroom/package/moreInfoListPage.wxml</text>
+<!--模块：精品小班课-->
+<view class='containerView' wx:if="{{pageType == 'julia_boutique'}}">
+  <view class='content-title label-level'>当前选择:</view>
+  <picker bindchange="onSelectLevel" range-key='name' value='{{currentSelectLevelIndex}}' range='{{levelGroup}}'>
+    <view class='comboxitem'>{{levelGroup[currentSelectLevelIndex].name}}</view>
+  </picker>
+  <!--内容-->
+  <block wx:if="{{levelGroup[currentSelectLevelIndex]}}">
+  <view style='height:20rpx;background-color:#ededed;'></view>
+    <block wx:for="{{levelGroup[currentSelectLevelIndex].arr}}">
+      <view class='lesson-categroy-container' catch:tap="onCategroyClick" data-obj="{{item}}">
+      <view class='lesson-categroy-title'>{{item.title}}</view>
+      <view catch:tap="onLessonCategroyItemTipsClick" data-tips="{{item.tips}}" class='lesson-categroy-tips'>I</view>
+      <view class='lesson-categroy-jiangli'>{{"奖杯:"+item.curBonus+"/"+item.sumBonus}}</view>
+      <view class='content-subitem-space'></view>
+      <view class='lesson-categroy-des'>{{item.des}}</view>
+      </view>
+    </block>
+    <view class='content-subitem-noline'></view>
+  </block>
+</view>
+<view class='containerView' wx:elif="{{pageType == 'public'}}">
+  ccc
+</view>
+<view class='containerView' wx:else>
+  ddd
+</view>

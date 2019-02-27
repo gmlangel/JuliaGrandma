@@ -13,9 +13,6 @@
   border-radius: 30rpx;
 }
 
-.containerView{
-  background-color: #fff;
-}
 .categroyScrollViewStyle{
   white-space: nowrap;
   height: 200rpx;
