@@ -1,10 +1,12 @@
 // pages/juliaClassroom/package/Julia_BoutiqueLesson.js
+var tool = require("../../../utils/util.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    isLoading:false,
     pageType: "small",
     wonderfulInfo: {
       title: "精彩瞬间",
@@ -90,7 +92,23 @@ Page({
           { categoryID: 20, gid: 2, title: "xxx系列", des: "特点xxxxxxxxxx,适合xxxxxxxxxxxxxxxxxxxxxxxxx", tips: "这个系列的课非常值得上", curBonus: 5, sumBonus: 30 }
         ]
       }
-    ]
+    ],
+    allLesson: {
+      title: "全部",
+      arr: [
+        { name: "测试信息1", lessonType: "public", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", lessonType: "public", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", lessonType: "public", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", lessonType: "public", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 }
+      ]
+    },hot: {
+      title: "推荐", arr: [
+        { name: "测试信息1", lessonType: "public", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", lessonType: "public", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", lessonType: "public", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", lessonType: "public", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 }
+      ]
+    }
 
   },
 
@@ -102,6 +120,21 @@ Page({
     this.setData({
       pageType: pageType
     })
+
+    this.data.isLoading = false;
+    this.forEachMakeTimeStr(this.data.hot.arr)
+    this.forEachMakeTimeStr(this.data.allLesson.arr)
+    this.setData({
+      hot: this.data.hot,
+      allLesson: this.data.allLesson
+    })
+  },
+  forEachMakeTimeStr: function (arr) {
+    let self = this;
+    arr.forEach((item, idx) => {
+      let strfm = self.makeLessonTime(item.startTime, item.endTime)
+      item.timeStr = strfm;
+    });
   },
 
   /**
@@ -143,7 +176,27 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    if (this.data.isLoading == true || this.data.pageType == "small") {
+      return;
+    }
+    this.data.isLoading = true;
+    wx.showLoading({
+      title: '加载数据....',
+    })
+    let myself = this;
+    let tid = setTimeout(function () {
+      let allArr = myself.data.allLesson.arr;
+      //模拟上拉刷新
+      let arr = allArr.length > 5 ? allArr.slice(0, 5) : allArr;
+      allArr.push(...arr);
+        myself.setData({
+          allLesson: myself.data.allLesson
+        })
 
+      clearTimeout(tid);
+      wx.hideLoading();
+      myself.data.isLoading = false;
+    }, 2000)
   },
 
   /**
@@ -197,5 +250,50 @@ Page({
         url: '/pages/juliaClassroom/package/moreInfoListPage?type=' + arg
       })
     }
+  },
+  /*
+    格式化上课时间字符串
+  */
+  makeLessonTime: function (st, et) {
+    return tool.YYYYMMDDHHMMSS(st) + "-" + tool.HHMMSS(et);
+  },
+  /**
+   * 约课或者取消约课
+   * 
+  */
+  onBtnBookClick: function (evt) {
+    let idx = evt.currentTarget.dataset.idx;
+    let item = this.data.hot.arr[idx];
+    if (item) {
+      item.isBooked = !!!item.isBooked;
+    }
+    this.setData({
+      hot: this.data.hot
+    })
+  },
+  /**
+   * 当某个课程被点击
+  */
+  onLessonItemClick: function (evt) {
+    let arg = evt.currentTarget.dataset.arg;
+    console.log(arg);
+    let argStr = encodeURI(JSON.stringify(arg));
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/LessonDetailsInfo?arg=' + argStr
+    })
+  },
+  /**
+   * 约课或者取消约课
+   * 
+  */
+  onBtnBookInAllClick: function (evt) {
+    let idx = evt.currentTarget.dataset.idx;
+    let item = this.data.allLesson.arr[idx];
+    if (item) {
+      item.isBooked = !!!item.isBooked;
+    }
+    this.setData({
+      allLesson: this.data.allLesson
+    })
   }
 })

@@ -63,3 +63,65 @@
   vertical-align: middle;
   padding: auto 40rpx;
 }
+
+.content-subitem-des{
+  font-size: 26rpx;
+  float: left;
+  padding-left:20rpx;
+  padding-top: 6rpx;
+  max-width: 500rpx;
+  min-width: 500rpx;
+  word-wrap:break-word; 
+}
+.content-subitem-teachername{
+  font-size: 26rpx;
+  float: left;
+  padding-left:20rpx;
+  padding-top: 15rpx;
+  max-width: 400rpx;
+  min-width: 400rpx;
+  word-wrap:break-word; 
+}
+
+.gmltime{
+  color: #333;
+}
+.content-subitem{
+  padding-left: 25rpx;
+}
+
+.content-subitem-container{
+  width: 685rpx;
+  border:1rpx solid #44b549;
+  padding-top:20rpx;
+  padding-bottom:10rpx;
+  padding-left:20rpx;
+}
+
+.btnbook{
+  float: right;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid;
+}
+
+.btnbook-booked{
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+.btnbook-unbooked{
+  color: #44b549;
+  border-color: #44b549;
+}
+.gmldescription{
+  color: #999999;
+  overflow: hidden;
+  height: 70rpx;
+}

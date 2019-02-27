@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText":"Julia精品"
+  "navigationBarTitleText":"Julia精品",
+  "onReachBottomDistance": -50
 }

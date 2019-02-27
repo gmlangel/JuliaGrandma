@@ -47,15 +47,19 @@ Page({
    */
   onLoad: function (options) {
     this.data.isLoading = false;
-    let arr = this.data.hot.arr;
+    this.forEachMakeTimeStr(this.data.hot.arr)
+    this.forEachMakeTimeStr(this.data.allLesson.arr)
+    this.setData({
+      hot: this.data.hot,
+      allLesson: this.data.allLesson
+    })
+  },
+  forEachMakeTimeStr:function(arr){
     let self = this;
     arr.forEach((item, idx) => {
       let strfm = self.makeLessonTime(item.startTime, item.endTime)
       item.timeStr = strfm;
     });
-    this.setData({
-      hot: this.data.hot
-    })
   },
   /*
     格式化上课时间字符串
