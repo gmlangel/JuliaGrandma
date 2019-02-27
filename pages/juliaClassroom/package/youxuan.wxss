@@ -1,16 +1,5 @@
 /* pages/juliaClassroom/package/youxuan.wxss */
 @import "../juliaClassroomIndex.wxss";
-.titleTool{
-  margin-top:10rpx;
-  margin-bottom: 20rpx;
-}
-
-.switch-tongyong{
-  width: 160rpx;
-  height: 60rpx;
-  line-height: 60rpx;
-  text-align: center;
-}
 
 .switch-left{
   margin-left: 220rpx;

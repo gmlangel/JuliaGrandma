@@ -1,0 +1,65 @@
+/* pages/juliaClassroom/package/Julia_BoutiqueLesson.wxss */
+.jb_switch-left{
+  margin-left: 140rpx;
+  float: left;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+
+
+.jb_switch-right{
+  float: left;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.jb_switch-unselected{
+  color: #44b549;
+  background-color: #fff;
+}
+
+.jb_switch-selected{
+  color: #fff;
+  background-color: #44b549;
+}
+
+.jb_search-button{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 60rpx;
+  border-radius: 30rpx;
+  background-color: #44b549;
+  text-align:center;
+  color:#fff;
+}
+.jb_search-right{
+  float: right;
+  margin-right: 20rpx;
+}
+.jb_search-left{
+  float: left;
+  margin-left: 20rpx;
+}
+.containerView{
+  background-color: #fff;
+}
+
+.lessonCategoryContainer{
+  display: table;
+  float: left;
+  width: 330rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.lessonCategoryItem{
+  display: table-cell;
+  max-width: 330rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  background-color:#f00;
+  text-align: center;
+  word-wrap: break-word;
+  vertical-align: middle;
+  padding: auto 40rpx;
+}

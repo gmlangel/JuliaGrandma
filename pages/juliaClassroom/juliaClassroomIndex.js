@@ -12,7 +12,7 @@ Page({
         {
           "id": 0,
           "name": "Julia精品\n小班课",
-          "url": "/pages/juliaClassroom/package/Boutique_smallLesson",
+          "url": "/pages/juliaClassroom/package/Julia_BoutiqueLesson?type=small",
           "color": "#ff0000"
         },
         {
@@ -24,7 +24,7 @@ Page({
         {
           "id": 2,
           "name": "Julia公开课",
-          "url": "/pages/juliaClassroom/package/Public_Lesson",
+          "url": "/pages/juliaClassroom/package/Julia_BoutiqueLesson?type=public",
           "color": "#4eb8fb"
         }
       ]

@@ -1,6 +1,6 @@
 <!--pages/juliaClassroom/package/LessonDetailsInfo.wxml-->
 <!--课程信息部分-->
-<view class='content-subitem-container'>
+<view class='content-subitem-container' id="lessonInfoContainer">
         <image class='content-subitem-img' src='{{lessonInfo.icon}}'></image>
         <view class='content-subitem-name'>
           {{lessonInfo.name}}

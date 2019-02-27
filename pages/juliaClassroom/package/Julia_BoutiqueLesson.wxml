@@ -1,0 +1,42 @@
+<!--pages/juliaClassroom/package/Julia_BoutiqueLesson.wxml-->
+<view class='titleTool'>
+  <view class='jb_search-button jb_search-left'>体</view>
+  <view catch:tap="onSwitchClick" data-state="small" class='switch-tongyong jb_switch-left {{pageType == "small" ? "jb_switch-selected" : "jb_switch-unselected"}}'>小班课</view>
+  <view catch:tap="onSwitchClick" data-state="public" class='switch-tongyong jb_switch-right {{pageType == "small" == false ? "jb_switch-selected" : "jb_switch-unselected"}}'>公开课</view>
+  <view class='jb_search-button jb_search-right'>搜</view>
+  <view class='jb_search-button jb_search-right'>商</view>
+  <view class='content-subitem-space'></view>
+</view>
+<!--模块：小班课-->
+<view wx:if='{{pageType == "small"}}' class='containerView'>
+  <!-- 栏目：精彩瞬间 -->
+  <view class='content-title' style='float:left;'>精彩瞬间</view>
+  <view wx:if="{{wonderfulInfo.arr.length >= 5}}" class='content-more' catch:tap="onMoreClick" data-type="wonderful">更多</view>
+  <view class="content-subitem-space"></view>
+  <scroll-view class="wonderfulScrollViewStyle" scroll-x="true">
+    <block wx:for="{{wonderfulInfo.arr}}">
+      <image wx:if="{{index < 5}}" src='{{item.imgURL}}' catchtap='onwonderfulInfoItemClick' class="wonderfulItem" data-id="{{item.id}}"></image>
+    </block>
+  </scroll-view>
+  <view class='space-line'></view>
+  <!-- 栏目：课程分组列表 -->
+  <block wx:for="{{levelGroup}}" wx:for-item="groupItem" wx:for-index="i">
+    <view class='content-title' style='float:left;'>{{groupItem.name}}</view>
+    <view wx:if="{{groupItem.arr.length >= 4}}" class='content-more' catch:tap="onMoreClick" data-type="julia_boutique_{{groupItem.argName}}">更多</view>
+    <view class="content-subitem-space"></view>
+    <view style='margin-left:40rpx'>
+    <block wx:for="{{groupItem.arr}}">
+    <view class='lessonCategoryContainer'  wx:if="{{index < 4}}">
+      <view catchtap='onLessonCategroyClick' class="lessonCategoryItem" data-arg="{{item}}">{{item.title}}</view>
+      </view>
+    </block>
+    <view class='content-subitem-space'></view>
+    </view>
+  </block>
+  <view class='content-subitem-noline'></view>
+</view>
+
+<!--模块：公开课-->
+<view wx:else class='containerView'>
+
+</view>

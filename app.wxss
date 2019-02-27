@@ -97,3 +97,32 @@ view{
 .content-subitem-noline{
   height: 80rpx;
 }
+.titleTool{
+  margin-top:10rpx;
+  margin-bottom: 20rpx;
+}
+
+.switch-tongyong{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.wonderfulScrollViewStyle{
+  white-space: nowrap;
+  height: 280rpx;
+}
+
+.wonderfulItem{
+  display: inline-block;
+  width: 420rpx;
+  max-width: 420rpx;
+  height: 280rpx;
+  margin-left: 40rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.space-line{
+  height: 20rpx;
+}

@@ -149,12 +149,12 @@ Page({
         commentary: arr,
         commentaryMSG:""
       });
-      // //滚动到评论底部
-      // wx.createSelectorQuery().select("#bottomCommentaryTool").boundingClientRect(function(rect){
-      //   wx.pageScrollTo({
-      //     scrollTop: rect.bottom,
-      //   })
-      // }).exec();
+      //滚动到评论底部
+      wx.createSelectorQuery().select("#lessonInfoContainer").boundingClientRect(function(rect){
+        wx.pageScrollTo({
+          scrollTop: rect.top,
+        })
+      }).exec();
       
     }else{
       this.setData({

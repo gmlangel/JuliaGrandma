@@ -49,28 +49,6 @@
   white-space:pre-wrap;
 }
 /*垂直居中样式结束*/
-
-
-
-.space-line{
-  height: 20rpx;
-}
-
-.wonderfulScrollViewStyle{
-  white-space: nowrap;
-  height: 280rpx;
-}
-
-.wonderfulItem{
-  display: inline-block;
-  width: 420rpx;
-  max-width: 420rpx;
-  height: 280rpx;
-  margin-left: 40rpx;
-  color: #fff;
-  border-radius: 10rpx;
-}
-
 .content-subitem-des{
   font-size: 26rpx;
   float: left;

@@ -1,4 +1,4 @@
-// pages/juliaClassroom/package/Boutique_small.js  精品小班课
+// pages/juliaClassroom/package/BoutiqueGropList.js
 Page({
 
   /**
@@ -12,7 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let argObjstr = decodeURI(options.arg)
+    try{
+      let argObj = JSON.parse(argObjstr);
+      wx.setNavigationBarTitle({
+        title: argObj.title
+      })
+    }catch(err){
+      console.log(err);
+    }
   },
 
   /**

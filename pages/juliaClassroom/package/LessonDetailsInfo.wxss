@@ -82,8 +82,8 @@
   float: left;
   padding-left:20rpx;
   padding-top: 6rpx;
-  max-width: 500rpx;
-  min-width: 500rpx;
+  max-width: 540rpx;
+  min-width: 540rpx;
   word-wrap:break-word;
   max-height: 360rpx;
   overflow: hidden;
