@@ -1,0 +1,2 @@
+<!--pages/taokeba/package/textAndImgPage.wxml-->
+<web-view src="{{infoObj.link}}" bindload="onWebLoadEnd"></web-view>

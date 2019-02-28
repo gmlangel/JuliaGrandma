@@ -1,0 +1,35 @@
+<!--pages/main/allTemplates.wxml-->
+<!--淘客吧：文字图片模板-->
+<template name="taokebawenzitupian">
+  <view class='template-content-subitem'>
+    <view bind:tap="ontaokebawenzitupianClick" data-arg="{{subItem}}">
+      <image class='template-content-subitem-img' src='{{subItem.icon}}'></image>
+      <view class='template-content-subitem-name'>
+        {{subItem.name}}
+      </view>
+      <view class='template-content-subitem-des'>
+        <text>{{subItem.des}}</text>
+      </view>
+      <view class='content-subitem-space'></view>
+      <view class='template-content-bottom-line'></view>
+    </view>
+  </view>
+</template>
+<!--淘客吧：图片轮播模板-->
+<template name="taokebatupianlunbo">
+  <scroll-view class="template-ScrollViewStyle" scroll-x="true">
+    <block wx:for="{{templateArr}}" wx:for-item="tempItem">
+      <image wx:if="{{index < 5}}" src='{{tempItem.imgURL}}' catchtap='ontaokebatupianlunboClick' class="template-ScrollViewItem" data-arg="{{tempItem}}"></image>
+    </block>
+  </scroll-view>
+</template>
+
+<!--淘客吧:绘本列表item模板-->
+<template name="taokebahuibenlist">
+  <view class='template-PictureContainer'>
+    <view class='template-PictureTitle'>{{subItem.name}}</view>
+    <view class='template-PictureZan'>赞:{{subItem.stars}}</view>
+    <view class='content-subitem-space'></view>
+    <image src='{{subItem.imgURL}}' catchtap='ontaokebatupianlunboClick' class='template-PictureListItem' data-arg="{{subItem}}"></image>
+  </view>
+</template>

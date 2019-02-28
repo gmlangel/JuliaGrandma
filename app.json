@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/taokeba/taokebaIndex",
     "pages/juliaClassroom/juliaClassroomIndex",
     "pages/main/index",
     "pages/guowaijingxuan/jingxuanIndex",
-    "pages/taokeba/taokebaIndex",
     "pages/userCenter/userCenterIndex",
     "pages/main/kouyudaka",
-    "pages/main/meiriyijv"
+    "pages/main/meiriyijv",
+    "pages/main/allTemplates"
   ],
   "subpackages": [
     {
@@ -35,7 +36,11 @@
     {
       "root": "pages/taokeba/package",
       "name": "taokeba",
-      "pages": []
+      "pages": [
+        "moreContentPage",
+        "textAndImgPage",
+        "pictureBookPage"
+      ]
     },
     {
       "root": "pages/userCenter/package",
@@ -60,8 +65,8 @@
     "backgroundColor": "#ededed",
     "list": [
       {
-        "pagePath": "pages/juliaClassroom/juliaClassroomIndex",
-        "text": "Julia课堂",
+        "pagePath": "pages/taokeba/taokebaIndex",
+        "text": "滔客吧",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },
@@ -72,8 +77,8 @@
         "selectedIconPath": "./assets/testIconSel.png"
       },
       {
-        "pagePath": "pages/taokeba/taokebaIndex",
-        "text": "滔客吧",
+        "pagePath": "pages/juliaClassroom/juliaClassroomIndex",
+        "text": "Julia课堂",
         "iconPath": "./assets/testIcon.png",
         "selectedIconPath": "./assets/testIconSel.png"
       },

@@ -1,0 +1,24 @@
+<!--pages/taokeba/package/moreContentPage.wxml-->
+<import src="/pages/main/allTemplates.wxml" />
+<view class='{{templateType == 1 ? "containerView floatContainerView" : "containerView"}}'>
+  <view class='space-line'></view>
+  <block wx:for="{{currentArr}}" wx:for-index="j" wx:for-item="subItem">
+    <block wx:if="{{templateType == 1}}">
+      <template is="taokebahuibenlist" data="{{subItem}}" />
+    </block>
+    <block wx:elif="{{templateType == 0}}">
+      <template is="taokebawenzitupian" data="{{subItem}}" />
+    </block>
+  </block>
+  <view class='space-line'></view>
+  <view class='content-subitem-noline'></view>
+</view>
+
+<block wx:if="{{templateType == 1}}">
+  <view class='wordBtnContainer'>
+  <block wx:for="{{btnNameArr}}">
+  <view data-idx="{{index}}" data-arg="{{item}}" catch:tap="onWordClick" class='{{index == currentWordBtnIdx ? "wordBtnItem wordBtnItem-selected":"wordBtnItem"}}'>{{item}}</view>
+  </block>
+  </view>
+<view class='content-subitem-space'></view>
+</block>

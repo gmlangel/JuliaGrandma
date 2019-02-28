@@ -1,0 +1,30 @@
+/* pages/taokeba/package/moreContentPage.wxss */
+@import "/pages/main/allTemplates.wxss";
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #fff;
+}
+.floatContainerView{
+  width:700rpx;
+}
+
+.wordBtnContainer{
+  position: fixed;
+  top:60rpx;
+  right: 0rpx;
+  width:40rpx;
+}
+.wordBtnItem{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+}
+.wordBtnItem-selected{
+  border-radius: 25rpx;
+  background-color: #44b549;
+  color: #fff;
+}

@@ -1,1 +1,15 @@
 /* taokeba/taokebaIndex.wxss */
+@import "/pages/main/allTemplates.wxss";
+.searchBarContainer{
+  background-color:#ededed;
+}
+
+.currentSearch{
+  color:#999;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin:10rpx 10rpx 20rpx 10rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
