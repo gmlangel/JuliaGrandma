@@ -14,10 +14,15 @@
         <view class='content-subitem-space'></view>
         <view class='content-teachername gmltime'>Julia</view>
         <block wx:if="{{!!subItem.isBooked}}">
-         <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" class='btnbook btnbook-booked'>取消预约</view>
-        <view catch:tap="onJoinRoomClick" data-obj="{{subItem}}" class='btnbook btn-joinroom'>进入教室</view>
+          <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" class='btnbook btnbook-booked'>取消预约</view>
+          <view catch:tap="onJoinRoomClick" data-obj="{{subItem}}" class='btnbook btn-joinroom'>进入教室</view>
         </block>
-        <view catch:tap="onBtnBookInAllClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
+        <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
+        <view class='topleft-container'>
+          <view class='triangle-topleft'></view>
+          <view class='triangle-topleft-text'>已完成</view>
+        </view>
+        <view class='bonusView'>奖杯:3/30</view>
         <view class='content-subitem-space'></view>
       </view>
     </view>

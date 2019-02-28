@@ -130,3 +130,31 @@ view{
 .containerView{
   background-color: #fff;
 }
+/*左上角三角形*/
+.triangle-topleft { 
+width: 0; 
+height: 0; 
+border-top: 130rpx solid #44b549; 
+border-right: 130rpx solid transparent; 
+} 
+.triangle-topleft-text{
+  font-size: 26rpx;
+  -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+  transform:rotate(-45deg);
+  margin-top:-120rpx;
+}
+
+/*右上角三角形*/
+.triangle-topright { 
+width: 0; 
+height: 0; 
+border-top: 130rpx solid #44b549; 
+border-left: 130rpx solid transparent; 
+} 
+
+.triangle-topright-text{
+  font-size: 26rpx;
+  -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+  transform:rotate(45deg);
+  margin-top:-120rpx;
+}

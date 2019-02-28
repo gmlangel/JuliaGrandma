@@ -58,6 +58,7 @@ Page({
    */
   onLoad: function (options) {
     let type = options.type;
+    console.log("更多的类型:"+type);
     this.setData({
       pageType: type
     })
