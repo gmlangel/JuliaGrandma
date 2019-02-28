@@ -304,5 +304,26 @@ Page({
     this.setData({
       allLesson: this.data.allLesson
     })
+  },
+  /*
+  当进入教室被点击
+  */
+  onJoinRoomClick: function (evt) {
+    let arg = evt.currentTarget.dataset.obj
+    let argStr = encodeURI(JSON.stringify(arg));
+    let url = "/pages/juliaClassroom/package/Classroom_public"
+    wx.navigateTo({
+      url: url + '?arg=' + argStr
+    })
+  },
+  onMallClick:function(){
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/Mall'
+    })
+  },
+  onKeChengTiXiClick:function(){
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/CurriculumStructure'
+    })
   }
 })

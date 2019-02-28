@@ -1,10 +1,10 @@
 <!--pages/juliaClassroom/package/Julia_BoutiqueLesson.wxml-->
 <view class='titleTool'>
-  <view class='jb_search-button jb_search-left'>体</view>
+  <view class='jb_search-button jb_search-left' catch:tap="onKeChengTiXiClick">体</view>
   <view catch:tap="onSwitchClick" data-state="small" class='switch-tongyong jb_switch-left {{pageType == "small" ? "jb_switch-selected" : "jb_switch-unselected"}}'>小班课</view>
   <view catch:tap="onSwitchClick" data-state="public" class='switch-tongyong jb_switch-right {{pageType == "small" == false ? "jb_switch-selected" : "jb_switch-unselected"}}'>公开课</view>
   <view class='jb_search-button jb_search-right'>搜</view>
-  <view class='jb_search-button jb_search-right'>商</view>
+  <view class='jb_search-button jb_search-right' catch:tap="onMallClick">商</view>
   <view class='content-subitem-space'></view>
 </view>
 <!--模块：小班课-->
@@ -55,7 +55,11 @@
         </view>
         <view class='content-subitem-space'></view>
         <view class='content-subitem-teachername gmltime'>教师:Julia</view>
-        <view catch:tap="onBtnBookClick" data-idx="{{j}}" wx:if="{{!!subItem.isBooked}}" class='btnbook btnbook-booked'>取消预约</view>
+        <block wx:if="{{!!subItem.isBooked}}" >
+        <view catch:tap="onBtnBookClick" data-idx="{{j}}" class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onJoinRoomClick" data-obj="{{subItem}}" class='btnbook btn-joinroom'>进入教室</view>
+        </block>
+        
         <view catch:tap="onBtnBookClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
         <view class='content-subitem-space'></view>
       </view>
@@ -77,7 +81,10 @@
         </view>
         <view class='content-subitem-space'></view>
         <view class='content-subitem-teachername gmltime'>教师:Julia</view>
-        <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" wx:if="{{!!subItem.isBooked}}" class='btnbook btnbook-booked'>取消预约</view>
+        <block wx:if="{{!!subItem.isBooked}}" >
+        <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onJoinRoomClick" data-obj="{{subItem}}" class='btnbook btn-joinroom'>进入教室</view>
+        </block>
         <view catch:tap="onBtnBookInAllClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
         <view class='content-subitem-space'></view>
       </view>

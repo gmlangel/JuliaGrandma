@@ -22,7 +22,7 @@
           <view class='triangle-topleft'></view>
           <view class='triangle-topleft-text'>已完成</view>
         </view>
-        <view class='bonusView'>奖杯:3/30</view>
+        <view class='bonusView'>奖杯:3/5</view>
         <view class='content-subitem-space'></view>
       </view>
     </view>

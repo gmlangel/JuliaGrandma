@@ -72,13 +72,12 @@
   word-wrap:break-word; 
 }
 .content-subitem-teachername{
-  font-size: 26rpx;
   float: left;
-  padding-left:20rpx;
   padding-top: 15rpx;
-  max-width: 400rpx;
-  min-width: 400rpx;
-  word-wrap:break-word; 
+  max-width: 160rpx;
+  min-width: 160rpx;
+  overflow: hidden;
+  text-align: center;
 }
 
 .gmltime{
@@ -122,4 +121,11 @@
   color: #999999;
   overflow: hidden;
   height: 70rpx;
+}
+
+.btn-joinroom{
+  float: right;
+  color: #44b549;
+  border-color: #44b549;
+  margin-right: 20rpx;
 }
