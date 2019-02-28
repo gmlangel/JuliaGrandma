@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    allLesson: {
+      title: "全部",
+      arr: [
+        { name: "测试信息1", lessonType: "public", book: 43325, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息2", lessonType: "public", book: 43001, icon: "https://www.juliaol.cn/mainsceneMap_139.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息3", lessonType: "public", book: 42288, icon: "https://www.juliaol.cn/mainsceneMap_141.png", des: "这是测试信息这是测试信息这是测试信息", startTime: 1550805237, endTime: 1550808837 },
+        { name: "测试信息1", lessonType: "public", book: 42013, icon: "https://www.juliaol.cn/mainsceneMap_113.png", des: "这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信息这是测试信", startTime: 1550805237, endTime: 1550808837 }
+      ]
+    }
   },
 
   /**
@@ -70,5 +78,41 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 约课或者取消约课
+   * 
+  */
+  onBtnBookInAllClick: function (evt) {
+    let idx = evt.currentTarget.dataset.idx;
+    let item = this.data.allLesson.arr[idx];
+    if (item) {
+      item.isBooked = !!!item.isBooked;
+    }
+    this.setData({
+      allLesson: this.data.allLesson
+    })
+  },
+  /*
+  当进入教室被点击
+  */
+  onJoinRoomClick: function (evt) {
+    let arg = evt.currentTarget.dataset.obj
+    let argStr = encodeURI(JSON.stringify(arg));
+    let url = "/pages/juliaClassroom/package/Classroom_small"
+    wx.navigateTo({
+      url: url + '?arg=' + argStr
+    })
+  },
+  /**
+   * 当某个课程被点击
+  */
+  onLessonItemClick: function (evt) {
+    let arg = evt.currentTarget.dataset.arg;
+    console.log(arg);
+    let argStr = encodeURI(JSON.stringify(arg));
+    wx.navigateTo({
+      url: '/pages/juliaClassroom/package/LessonDetailsInfo?arg=' + argStr
+    })
   }
 })

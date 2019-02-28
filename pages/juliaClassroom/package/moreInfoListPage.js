@@ -61,12 +61,6 @@ Page({
     this.setData({
       pageType: type
     })
-    if (type == "julia_boutique"){
-      // this.data.levelRange = this.makeLevelRange();
-      // this.setData({
-      //   levelRange: this.data.levelRange
-      // })
-    }
   },
   onSelectLevel:function(evt){
     let idx = evt.detail.value;
@@ -125,8 +119,9 @@ Page({
   },
   onCategroyClick:function(evt){
     let obj = evt.currentTarget.dataset.obj;
+    let str = encodeURI(JSON.stringify(obj));
     wx.navigateTo({
-      url: '小班课系列列表页',
+      url: '/pages/juliaClassroom/package/BoutiqueGropList?arg=' + str,
     })
   },
   onLessonCategroyItemTipsClick:function(evt){

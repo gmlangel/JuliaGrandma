@@ -21,8 +21,8 @@
   </block>
 </view>
 <view class='containerView' wx:elif="{{pageType == 'public'}}">
-  ccc
+  公开课
 </view>
 <view class='containerView' wx:else>
-  ddd
+  其它
 </view>

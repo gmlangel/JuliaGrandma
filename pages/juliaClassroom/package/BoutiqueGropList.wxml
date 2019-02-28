@@ -1,2 +1,26 @@
 <!--pages/juliaClassroom/package/BoutiqueGropList.wxml-->
-<text>pages/juliaClassroom/package/BoutiqueGropList.wxml</text>
+<view class='containerView'>
+  <view class='space-line'></view>
+  <block wx:for="{{allLesson.arr}}" wx:for-index="j" wx:for-item="subItem">
+    <view class='content-subitem'>
+      <view class='content-subitem-container' bind:tap="onLessonItemClick" data-arg="{{subItem}}">
+        <image class='content-subitem-img' src='{{subItem.icon}}'></image>
+        <view class='content-subitem-name'>
+          {{subItem.name}}
+        </view>
+        <view class='content-des content_description'>
+          <text>{{subItem.des}}</text>
+        </view>
+        <view class='content-subitem-space'></view>
+        <view class='content-teachername gmltime'>Julia</view>
+        <block wx:if="{{!!subItem.isBooked}}">
+         <view catch:tap="onBtnBookInAllClick" data-idx="{{j}}" class='btnbook btnbook-booked'>取消预约</view>
+        <view catch:tap="onJoinRoomClick" data-obj="{{subItem}}" class='btnbook btn-joinroom'>进入教室</view>
+        </block>
+        <view catch:tap="onBtnBookInAllClick"  data-idx="{{j}}" wx:else class='btnbook btnbook-unbooked'>预约</view>
+        <view class='content-subitem-space'></view>
+      </view>
+    </view>
+  </block>
+  <view class='content-subitem-noline'></view>
+</view>
