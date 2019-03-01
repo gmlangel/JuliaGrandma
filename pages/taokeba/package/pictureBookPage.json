@@ -1,5 +1,8 @@
 {
   "usingComponents": {},
   "navigationBarTitleText":"",
-  "pageOrientation": "landscape"
+  "pageOrientation": "landscape",
+  
+  "enablePullDownRefresh":false,
+  "navigationStyle":"custom"
 }

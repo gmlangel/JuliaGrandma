@@ -1,2 +1,21 @@
 <!--pages/taokeba/package/pictureBookPage.wxml-->
-<text>pages/taokeba/package/pictureBookPage.wxml</text>
+
+<view class="gmlcontainer">
+  <view class='customNavigationBar'>
+    <view class='customBtn_back_container'>
+      <view class='customBtn_back'></view>
+    </view>
+    <view class="customTitleText">
+      {{myTitle}}
+    </view>
+    <view class='customToolContainer'>这是测试</view>
+    <view class='content-subitem-space'></view>
+  </view>
+  <swiper duration="{{duration}}" class='picture-ScrollViewStyle'>
+    <block wx:for="{{picArr}}">
+      <swiper-item class="picture-ScrollViewItem">
+        <image class="picture-img" src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

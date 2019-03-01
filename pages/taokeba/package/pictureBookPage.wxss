@@ -1,1 +1,56 @@
 /* pages/taokeba/package/pictureBookPage.wxss */
+
+.picture-ScrollViewStyle{
+  height: 360rpx;
+  width: 750rpx;
+  white-space: nowrap;
+  background-color: #f00;
+}
+
+.picture-ScrollViewItem{
+  color: #fff;
+  text-align: center;
+}
+.picture-img{
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.customNavigationBar{
+  height: 65rpx;
+  background: #ededed;
+}
+.gmlcontainer view{
+  font-size: 18rpx;
+}
+.customBtn_back_container{
+  margin-top:22rpx;
+  background-color:#f0f;
+  width:40rpx;
+  height:40rpx;
+  float:left;
+  padding:5rpx;
+}
+.customBtn_back{
+  border-radius: 15rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.customTitleText{
+  margin-top:22rpx;
+  width:350rpx;
+  height:40rpx;
+  line-height:40rpx;
+  color:#333;
+  padding-left:10rpx;
+  float:left;
+  overflow:hidden;
+  font-size:20rpx;
+}
+.customToolContainer{
+  margin-top:22rpx;
+  width:250rpx;
+  float:left;
+  height:40rpx;
+}

@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    myTitle:"",
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 333,
+    picArr:[
+      "https://www.juliaol.cn/wx_resource/a_0.png",
+      "https://www.juliaol.cn/wx_resource/a_1.jpg",
+      "https://www.juliaol.cn/wx_resource/a_2.jpg"
+    ]
   },
 
   /**
@@ -20,8 +29,8 @@ Page({
       })
       let name = infoObj.name || "";
       let titleStr = name.length > 20 ? name.substring(0, 17) + "..." : name;
-      wx.setNavigationBarTitle({
-        title: titleStr,
+      this.setData({
+        myTitle:titleStr
       })
     } catch (err) {
 
