@@ -82,7 +82,30 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (arg) {
+    return {title:"JuliaGrandma 分享测试"}//还可以自定义分享的page路径（path ’/‘开头）和分享的图片imageUrl只支持PNG和JPG
+  },
+  onClickGoback:function(){
+    wx.navigateBack({
+      
+    })
+  },
+  /*
+  *点赞
+  */
+  onClickGoZan:function(){
+
+  },
+  /*
+  *收藏
+  */
+  onClickGoshowcang: function () {
+
+  },
+  /*
+  *分享
+  */
+  onClickGoShare: function () {
 
   }
 })

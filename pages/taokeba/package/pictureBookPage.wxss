@@ -26,16 +26,16 @@
 }
 .customBtn_back_container{
   margin-top:22rpx;
-  background-color:#f0f;
   width:40rpx;
   height:40rpx;
   float:left;
-  padding:5rpx;
 }
 .customBtn_back{
   border-radius: 15rpx;
   height: 30rpx;
   width: 30rpx;
+  background-color:#f0f;
+  margin:5rpx 10rpx;
 }
 .customTitleText{
   margin-top:22rpx;
@@ -53,4 +53,13 @@
   width:250rpx;
   float:left;
   height:40rpx;
+}
+.customTool_btn{
+  float:right;
+  margin-right: 10rpx;
+  margin-top: 5rpx;
+  border-radius: 15rpx;
+  height: 30rpx;
+  width: 30rpx;
+  background-color:#f0f;
 }

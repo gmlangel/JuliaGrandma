@@ -3,12 +3,16 @@
 <view class="gmlcontainer">
   <view class='customNavigationBar'>
     <view class='customBtn_back_container'>
-      <view class='customBtn_back'></view>
+      <view class='customBtn_back' catchtap='onClickGoback'></view>
     </view>
     <view class="customTitleText">
       {{myTitle}}
     </view>
-    <view class='customToolContainer'>这是测试</view>
+    <view class='customToolContainer'>
+      <view class='customTool_btn' catchtap='onClickGoZan'>赞</view>
+      <view class='customTool_btn' catchtap='onClickGoshowcang'>收</view>
+      <button open-type='share' class='customTool_btn' catchtap='onClickGoShare'>分</button>
+    </view>
     <view class='content-subitem-space'></view>
   </view>
   <swiper duration="{{duration}}" class='picture-ScrollViewStyle'>

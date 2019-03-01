@@ -2,7 +2,7 @@
   "usingComponents": {},
   "navigationBarTitleText":"",
   "pageOrientation": "landscape",
-  
+  "disableScroll": true,
   "enablePullDownRefresh":false,
   "navigationStyle":"custom"
 }
