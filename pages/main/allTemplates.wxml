@@ -26,7 +26,7 @@
 
 <!--淘客吧:绘本列表item模板-->
 <template name="taokebahuibenlist">
-  <view class='template-PictureContainer'>
+  <view id="{{subItem.key?'taokebahuibenlist_'+subItem.key:''}}" class='template-PictureContainer'>
     <view class='template-PictureTitle'>{{subItem.name}}</view>
     <view class='template-PictureZan'>赞:{{subItem.stars}}</view>
     <view class='content-subitem-space'></view>

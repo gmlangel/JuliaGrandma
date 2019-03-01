@@ -6,6 +6,7 @@ Page({
    */
   data: {
     isloading:false,
+    currentWordBtnIdx:"0",
     currentArr:[],
     btnNameArr: [],
     content: [
@@ -31,6 +32,7 @@ Page({
         arr: [
           {
             "id": 0,
+            "key":"A",
             "stars":445,
             "name": "小蝌蚪找妈妈1",
             "videoURL": "url1",
@@ -38,6 +40,7 @@ Page({
           },
           {
             "id": 1,
+            "key": "B",
             "stars":445,
             "name": "小蝌蚪找妈妈2",
             "videoURL": "url1",
@@ -45,6 +48,7 @@ Page({
           },
           {
             "id": 2,
+            "key": "C",
             "stars": 445,
             "name": "小蝌蚪找妈妈3",
             "videoURL": "url2",
@@ -52,6 +56,7 @@ Page({
           },
           {
             "id": 0,
+            "key": "D",
             "stars": 445,
             "name": "小蝌蚪找妈妈1",
             "videoURL": "url1",
@@ -59,6 +64,7 @@ Page({
           },
           {
             "id": 1,
+            "key": "E",
             "stars": 445,
             "name": "小蝌蚪找妈妈2",
             "videoURL": "url1",
@@ -66,6 +72,7 @@ Page({
           },
           {
             "id": 2,
+            "key": "F",
             "stars": 445,
             "name": "小蝌蚪找妈妈3",
             "videoURL": "url2",
@@ -179,5 +186,12 @@ Page({
       currentWordBtnIdx:idx
     })
     console.log(key);
+    //滚动到指定位置
+    wx.createSelectorQuery().select("#taokebahuibenlist_" + key).boundingClientRect(function (rect) {
+      wx.pageScrollTo({
+        scrollTop: rect.top,
+        duration:0
+      })
+    }).exec();
   }
 })
